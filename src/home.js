@@ -1,0 +1,72 @@
+import React, { Component } from 'react';
+import {Container, Row, Col} from 'react-bootstrap';
+import Welcome from './Welcome';
+import Display from './Display';
+import {Link} from 'react-router-dom';
+import Fade from 'react-reveal/Fade';
+import Roll from 'react-reveal/Roll'
+import makeCarousel from 'react-reveal/makeCarousel';
+import Logo from './imgsrc/logo.png';
+import Arrow from './imgsrc/arrow.gif';
+import './App.css';
+import styled, { css } from 'styled-components';
+const CarouselDiv = styled.div`
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    height: 150px;
+    overflow: hidden;
+`;
+const CarouselUI = ({ children }) => <CarouselDiv fluid>{children}</CarouselDiv>;
+const Carousel = makeCarousel(CarouselUI);
+
+export default class Home extends Component {
+    render() {
+    return (
+        <div>
+        <Welcome/>
+        <section id="home">
+            <div className="home">
+            <Container>
+            <Roll right>
+            <Row>
+            <Col className="page-title">
+            <div className="page-title">
+                <img className="logo" src={Logo} alt='Jelujur'/>
+            </div>
+            </Col>
+            <Col className="center-subtitle page-subtitle">
+            <Carousel defaultWait={3000} /*wait for 1000 milliseconds*/ >
+                <Fade top>
+                    <h3 className="page-subtitle">by Shelli Maria.</h3>
+                </Fade>
+                <Fade top>
+                    <h3 className="page-subtitle">fashion made simple.</h3>
+                </Fade>
+                <Fade top>
+                    <h3 className="page-subtitle">for you.</h3>
+                </Fade>
+            </Carousel>
+            </Col>
+            </Row>
+            </Roll>
+            </Container>
+            <Fade delay={2000}>
+            <div className="discover">
+                <div className="arrow-holder">
+                    <img className="arrow" src={Arrow} alt='Discover'/>
+                </div>
+                {/* <Link to={process.env.PUBLIC_URL + '/display'}> */}
+                <a href="#display">
+                <h3 className="text-discover">Discover</h3>
+                </a>
+                {/* </Link> */}
+            </div>
+            </Fade>
+            </div>
+        </section>
+        </div>
+    );
+  }
+}

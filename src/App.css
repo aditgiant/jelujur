@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Domine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
+html {
+  width: 100%;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body{
+  height:100%;
+  margin:0;
+}
+
+.loading {
+  width:  100%;
+  height:100vh;
+  background-color: #CEC5C0;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index:999;
+  animation-name:fadeout;
+  animation-delay:3.75s;
+  animation-duration: 1000ms;
+  animation-fill-mode: forwards;
+}
+
+.loading-gif {
+  width: 20vw;
+  text-align:center;
+  margin-top:30vh;
+  margin-left:40vw;
+}
+
+@keyframes fadeout {
+    from {opacity:1; visibility:visible}
+    to {opacity:0; visibility:hidden}
+}
+
+
+.App {
+  text-align: center;
+  height: 100%
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.home {
+  position: relative;
+  background-color: #F5E4DC;
+  height: 100vh;
+  width:100%;
+  top:0;
+  left:0;
+  margin:0;
+  padding-top:150px;
+  font-family: 'Manrope', sans-serif;  
+}
+
+#thumbnail {
+  max-width:300px;
+  max-height:300px;
+}
+
+div a {
+  font-family: 'Sacramento', cursive;
+}
+
+.discover {
+  bottom:0;
+  padding-bottom:25px;
+  width:100%;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+}
+
+.text-discover{
+  font-size: 24px;
+  color: rgb(87, 80, 76);
+  display:inline-block;
+  opacity: 0.5;
+  transition: transform 250ms ease-in-out;
+}
+
+.arrow-holder{
+  align-items: center;
+  text-align: center;
+  height:50px;
+  width:100%;
+  position: relative;
+  bottom: 0px;
+  opacity:0.3;
+}
+
+.text-discover:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.page-title {
+  align-items:right;
+  text-align:right;
+}
+
+.page-subtitle {
+  text-align:left;
+  color: #C59A37;
+  font-size: 24px;
+}
+
+.center-subtitle {
+  padding-top:40px;
+}
+
+.logo {
+  width: 200px;
+  transition: transform 250ms ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.display {
+  position: relative;
+  background-color: #CEC5C0;
+  height: 100vh;
+  width:100%;
+  top:0;
+  left:0;
+  margin:0;
+  padding-top:100px;
+  font-family: 'Sacramento', cursive;
+}
+
+.display-cabinet {
+  text-align: right;
+}
+
+.display-holder{
+  right:0;
+  text-align:right;
+  /* margin-bottom: 50px; */
+  width: 100%;
+  position:absolute;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+img.product1 {
+  animation-name: enddisplay;
+  animation-duration: 750ms;
+  position:absolute;
+  max-height: 40%;
+  top:75px;
+  left:275px;
+  /* transition: 250ms ease-in-out; */
+  z-index:5;
+}
+
+img.product1:hover {
+  /* transform: rotate(-10deg) translate(20px,-5px); */
+  animation-name: startdisplay;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards
+}
+
+img.product2 {
+  animation-name: enddisplay;
+  animation-duration: 750ms;
+  position:absolute;
+  max-height: 35%;
+  top:70px;
+  left:360px;
+  /* transition: 250ms ease-in-out; */
+  z-index:4;
+}
+
+img.product2:hover {
+  /* transform: rotate(-10deg) translate(20px,-5px); */
+  animation-name: startdisplay;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards
+}
+
+img.product3 {
+  animation-name: enddisplay;
+  animation-duration: 750ms;
+  position:absolute;
+  max-height: 40%;
+  top:75px;
+  left:425px;
+  /* transition: 250ms ease-in-out; */
+  z-index:3;
+}
+
+img.product3:hover {
+  /* transform: rotate(-10deg) translate(20px,-5px); */
+  animation-name: startdisplay;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards
+}
+
+img.product4 {
+  animation-name: enddisplay;
+  animation-duration: 750ms;
+  position:absolute;
+  max-height: 28%;
+  top:70px;
+  left:525px;
+  /* transition: 250ms ease-in-out; */
+  z-index:2;
+}
+
+img.product4:hover {
+  /* transform: rotate(-10deg) translate(20px,-5px); */
+  animation-name: startdisplay;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards
+}
+
+@keyframes startdisplay{
+    to  {transform: rotate(-10deg) translate(20px,0px)};
+}
+
+@keyframes enddisplay{
+  0%{
+    transform: rotate(-10deg) translate(20px,0px)
+  }
+  50%{
+    transform: rotate(10deg) translate(-20px,0px);
+  }
+  75%{
+    transform: rotate(-5deg) translate(10px,0px);
+  }
+  100%{
+    transform: rotate(0deg) translate(0px,0px);
+  }
+}
+
+#display-description{
+  position: absolute;
+  right: 10px;
+}
+
+.display-detail{
+  /* background-color: #CEC5C0; */
+  position:absolute;
+  top:0;
+  left:0;
+  padding-top:50px;
+  padding-left:50px;
+  display:block;
+  width:100%;
+  height:100%;
+}
+
+.display-detail h3{
+  color: #F5E4DC; 
+  text-align: left;
+  font-size: 42px;
+  font-family: 'Sacramento', cursive;
+}
+.display-detail p{
+  color: rgb(87, 80, 76);
+  font-family: 'Manrope', sans-serif;
+  text-align: left;
+  font-size: 18px;
+}
+
+#flyoutMenu {
+  align-items: center;
+  text-align: center;
+  width: 30vw;
+  height: 100vh;
+  background-color: #feeae17b;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: transform 0.75s
+              cubic-bezier(0, .52, 0, 1);
+  overflow: scroll;
+  z-index: 200;
+}
+ 
+#flyoutMenu.hide {
+  transform: translate3d(-30vw, 0, 0);
+}
+ 
+#flyoutMenu.show {
+  transform: translate3d(0vw, 0, 0);
+  overflow: hidden;
+}
+
+#flyoutMenu h3 {
+  font-size: 24px;
+  margin:50px;
+  opacity:0.6;
+  transition: transform 250ms ease-in-out;
+}
+ 
+#flyoutMenu h3 a {
+  opacity: 0.6;
+  font-family: 'Manrope', sans-serif;  
+  color: #333;
+  text-align: center;
+  text-decoration: none;
+}
+ 
+#flyoutMenu h3:hover {
+  transform: scale(1.2);
+  opacity: 1;
+} 
+
+#roundButton {
+  opacity:50%;
+  background: transparent;
+  margin: 20px;
+  width: 75px;
+  height: 75px;
+  border-color:transparent;
+  border-radius: 50%;
+  transition: transform 1s
+              cubic-bezier(0, .52, 0, 1);
+  z-index:200;
+  outline: none;
+}
+
+#roundButton.hide {
+  transform: translate3d(0vw, 0, 0);
+}
+ 
+#roundButton.show {
+  transform: translate3d(30vw, 0, 0) rotate(90deg);
+}
+
+#roundButton.show:hover {
+  transform: translate3d(30vw, 0, 0) scale(2, 2) rotate(90deg);
+  opacity:100%;
+}
+ 
+#roundButton.hide:hover {
+  opacity: 100%;
+  cursor: pointer;
+  transform: scale(2, 2);
+}
+
+/* #roundButton.hide:hover i{
+  color: #FFF;
+} */
+
+/* #roundButton.show i{
+  color: #FFF;
+  transform: scale(2, 2);
+} */
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
