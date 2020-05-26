@@ -7,7 +7,7 @@ class AdminHome extends Component {
     constructor(props) {
         super(props);
         this.logout = this.logout.bind(this);
-        this.ref = fire.firestore().collection('boards');
+        this.ref = fire.firestore().collection('Products');
         this.unsubscribe = null;
         this.state = {
             boards: []
@@ -17,13 +17,12 @@ class AdminHome extends Component {
     onCollectionUpdate = (querySnapshot) => {
         const boards = [];
         querySnapshot.forEach((doc) => {
-          const { title, image, description } = doc.data();
+          const { title, category } = doc.data();
           boards.push({
             key: doc.id,
             doc, // DocumentSnapshot
             title,
-            image,
-            description,
+            category
           });
         });
         this.setState({
@@ -53,7 +52,7 @@ class AdminHome extends Component {
                 <tr>
                   <th>Title</th>
                   {/* <th>Image</th> */}
-                  <th>Description</th>
+                  <th>Category</th>
                 </tr>
               </thead>
               <tbody>
@@ -61,7 +60,7 @@ class AdminHome extends Component {
                   <tr>
                     <td><Link style={{'fontFamily':'Manrope'}} to={`/adminshow/${board.key}`}>{board.title}</Link></td>
                     {/* <td>{board.image}</td> */}
-                    <td>{board.description}</td>
+                    <td>{board.category}</td>
                   </tr>
                 )}
               </tbody>

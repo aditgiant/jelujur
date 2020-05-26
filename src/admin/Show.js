@@ -13,7 +13,7 @@ class AdminShow extends Component {
   }
 
   componentDidMount() {
-    const ref = fire.firestore().collection('boards').doc(this.props.match.params.id);
+    const ref = fire.firestore().collection('Products').doc(this.props.match.params.id);
     ref.get().then((doc) => {
       if (doc.exists) {
         this.setState({
@@ -49,8 +49,12 @@ class AdminShow extends Component {
           </div>
           <div class="panel-body">
             <dl>
-              <dt>Image:</dt>
+              <dt>Category:</dt>
+              <dd>{this.state.board.category}</dd>
+              <dt>Main image:</dt>
               <dd>{this.state.board.image !== '' && <img id="thumbnail" src={this.state.board.image}/>}</dd>
+              <dt>More images:</dt>
+              <dd>{this.state.board.moreImage !== '' && <img id="thumbnail" src={this.state.board.moreImage}/>}</dd>
               <dt>Description:</dt>
               <dd>{this.state.board.description}</dd>
             </dl>

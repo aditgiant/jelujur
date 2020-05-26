@@ -11,8 +11,8 @@ class SidebarButton extends Component {
       <button id="roundButton"
               onMouseDown={this.props.handleMouseDown}
               className={visibilitybutton}>
-              {visibilitybutton==="hide" && <i class="fa fa-bars"></i>}
-              {visibilitybutton==="show" && <i class="fa fa-times"></i>}
+              {visibilitybutton==="hide" && <i class="fa fa-bars fa-2x"></i>}
+              {visibilitybutton==="show" && <i class="fa fa-times fa-2x"></i>}
               </button>
     );
   }

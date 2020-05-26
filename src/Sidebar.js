@@ -32,16 +32,17 @@ class Sidebar extends Component {
         visibility = "show";
       }
     return (
-      <div style={{'z-index':'999', 'position':'fixed','display':'inline-block'}}>
+      <div id='sidebar-group'>
         <SidebarButton handleMouseDown={this.handleMouseDown} visible={this.state.visible}/>
         <div id="flyoutMenu"
            onClick={this.handleMouseDown} 
            className={visibility}>
-        <Link style={{ textDecoration: 'none' }} to={process.env.PUBLIC_URL + '/'}><h3><a>Home</a></h3></Link>
+        <Link style={{ textDecoration: 'none' }} to={process.env.PUBLIC_URL + '/'}><h3><a>HOME</a></h3></Link>
         {/* <Link style={{ textDecoration: 'none' }} to={process.env.PUBLIC_URL + '/admin'}><h3><a>Admin</a></h3></Link> */}
-        <h3><a href="#">About</a></h3>
-        <h3><a href="#">Contact</a></h3>
-        <h3><a href="#">Search</a></h3>
+        <h3><a href="#">ABOUT US</a></h3>
+        <h3><a href="#">SHOP NOW</a></h3>
+        <Link style={{ textDecoration: 'none' }} to={process.env.PUBLIC_URL + '/collections'}><h3><a href="#">COLLECTIONS</a></h3></Link>
+        <h3><a href="#">CONTACT US</a></h3>
       </div>
       </div>
     );

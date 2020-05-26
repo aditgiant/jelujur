@@ -36,34 +36,32 @@ export default class Home extends Component {
                 <img className="logo" src={Logo} alt='Jelujur'/>
             </div>
             </Col>
+            </Row>
+            <Row>
             <Col className="center-subtitle page-subtitle">
             <Carousel defaultWait={3000} /*wait for 1000 milliseconds*/ >
                 <Fade top>
-                    <h3 className="page-subtitle">by Shelli Maria.</h3>
+                    <h3 className="page-subtitle"><strong>SS20 COLLECTIONS</strong></h3>
                 </Fade>
                 <Fade top>
-                    <h3 className="page-subtitle">fashion made simple.</h3>
+                    <h3 className="page-subtitle"><strong>FIND OUT MORE</strong></h3>
                 </Fade>
-                <Fade top>
+                {/* <Fade top>
                     <h3 className="page-subtitle">for you.</h3>
-                </Fade>
+                </Fade> */}
             </Carousel>
             </Col>
             </Row>
             </Roll>
             </Container>
-            <Fade delay={2000}>
             <div className="discover">
+                <a className="discover-hover"href="#display">
+                <h3 className="text-discover">DISCOVER <br/></h3>
                 <div className="arrow-holder">
                     <img className="arrow" src={Arrow} alt='Discover'/>
                 </div>
-                {/* <Link to={process.env.PUBLIC_URL + '/display'}> */}
-                <a href="#display">
-                <h3 className="text-discover">Discover</h3>
                 </a>
-                {/* </Link> */}
             </div>
-            </Fade>
             </div>
         </section>
         </div>
