@@ -51,12 +51,19 @@ class AdminShow extends Component {
             <dl>
               <dt>Category:</dt>
               <dd>{this.state.board.category}</dd>
+              <dt>Price:</dt>
+              <dd>{this.state.board.price}</dd>
               <dt>Main image:</dt>
               <dd>{this.state.board.image !== '' && <img id="thumbnail" src={this.state.board.image}/>}</dd>
               <dt>More images:</dt>
               <dd>{this.state.board.moreImage !== '' && <img id="thumbnail" src={this.state.board.moreImage}/>}</dd>
               <dt>Description:</dt>
-              <dd>{this.state.board.description}</dd>
+              <dd>{this.state.board.description1}</dd>
+              <dd>{this.state.board.description2}</dd>
+              <dt>Material:</dt>
+              <dd>{this.state.board.material1}</dd>
+              <dd>{this.state.board.material2}</dd>
+              <dd>{this.state.board.material3}</dd>
             </dl>
             <Link style={{'fontFamily':'Manrope'}} to={`/adminedit/${this.state.key}`} class="btn btn-success">Edit</Link>&nbsp;
             <button onClick={this.delete.bind(this, this.state.key)} class="btn btn-danger">Delete</button>

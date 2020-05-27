@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Welcome from './Welcome';
+import About from './About';
 import Lookbook from './Lookbook';
 import Product from './product';
 import Display from './Display';
@@ -17,10 +19,12 @@ class App extends Component {
   render(){
   return (
     <div>
+    <Welcome/>
     <Router>
       <Sidebar/>
       <Switch>
       <Route path={process.env.PUBLIC_URL + '/'} exact component={Display}/>
+      <Route path={process.env.PUBLIC_URL + '/aboutus'} exact component={About}/>
       <Route path={process.env.PUBLIC_URL + '/collections'} component={Lookbook}/>
       <Route path={process.env.PUBLIC_URL + '/product/:id'} component={Product}/>
       <Route path={process.env.PUBLIC_URL + '/admin'} component={Admin}/>

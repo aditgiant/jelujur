@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
-import Welcome from './Welcome';
 import Display from './Display';
 import {Link} from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
@@ -25,7 +24,6 @@ export default class Home extends Component {
     render() {
     return (
         <div>
-        <Welcome/>
         <section id="home">
             <div className="home">
             <Container>

@@ -28,10 +28,10 @@ body{
 }
 
 .loading-gif {
-  width: 20vw;
+  width: 10vw;
   text-align:center;
-  margin-top:30vh;
-  margin-left:40vw;
+  margin-top:35vh;
+  margin-left:45vw;
 }
 
 @keyframes fadeout {
@@ -316,7 +316,7 @@ img.product4:hover {
 }
 
 #sidebar-group{
-  z-index:999;
+  z-index:998;
   position:absolute;
   top:0;
   left:0;
@@ -405,7 +405,7 @@ img.product4:hover {
 }
 
 #header {
-  background: #ffffff;
+  /* background: #ffffff; */
   z-index:500;
   position:fixed;
   left:0;
@@ -419,6 +419,37 @@ img.product4:hover {
   max-height: 75px;
   margin-top:15px;
   margin-bottom:15px;
+}
+
+#aboutus-background{
+  width:100%;
+  height:100vh;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:-1;
+  background-color: #feeae1e1;
+}
+
+#aboutus-content {
+  margin-top: 120px;
+  margin-left:auto;
+  margin-right:auto;
+  /* margin-right:auto; */
+  text-align: left;
+}
+
+#aboutus-content h4{
+  font-size:1em;
+  color:#231f20;
+}
+
+#aboutus-content p{
+  font-size:0.75em;
+}
+
+#founder-title {
+  color:#a04b4b;
 }
 
 #catalog-content {
@@ -477,7 +508,7 @@ img.product4:hover {
 
 #back-to-catalog{
   display:inline-block;
-  /* white-space: nowrap; */
+  text-align:right;
   position: relative;
   z-index: 50;
 }
@@ -505,23 +536,116 @@ img.product4:hover {
 }
 
 #product-thumbnail {
-  display:inline-block;
   z-index: 40;
+  display: flex;
+  flex-wrap: wrap;
+  text-align:center;
+}
+
+.thumbnails {
+  margin-left:auto;
+  margin-right:auto;
   position: relative;
   text-align:center;
 }
 
-#product-thumbnail img{
+.thumbnails img{
   max-width: 100%;
   max-height:75vh;
+}
+
+#navigation-thumbnail{
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:20vh;
+  position: relative;
+  text-align:center;
+  background:transparent; /* Green */
+  border: none;
+  color: #C59A39;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Manrope', sans-serif;
+  display:inline-block;
+}
+
+#navigation-thumbnail h1{
+  cursor:pointer;
+  transition: transform 250ms ease-in-out;
+}
+
+#navigation-thumbnail:hover h1{
+  transform: translateX(-5px) scale(1.1)
+}
+
+#first-thumbnail{
+  transition: opacity 100ms ease-in-out;
+}
+
+#second-thumbnail{
+  transition: opacity 100ms ease-in-out;
+}
+
+#main-thumbnail.main-thumbnail-show {
+  opacity:1;
+}
+
+#main-thumbnail.second-thumbnail-show {
+  opacity:0;
+  display:none;
+}
+
+#second-thumbnail.main-thumbnail-show {
+  opacity:0;
+  display:none;
+}
+
+#second-thumbnail.second-thumbnail-show {
+  opacity:1;
 }
 
 #product-description {
   display:inline-block;
 }
 
-#product-description h3, p {
+#product-description h4, h5, p {
   text-align: left;
+}
+
+#product-description p {
+  font-size:0.75em;
+}
+
+.toggle {
+  cursor:pointer;
+  white-space: nowrap;
+  overflow-x: auto;
+  text-align: left;
+}
+
+.toggle h3{
+  display:inline-block;
+  font-size: 0.75em;
+  font-family: 'Manrope', sans-serif;
+  transition: transform 250ms ease-in-out;
+}
+
+.toggle p{
+  display:inline-block;
+  font-size: 0.75em;
+  transition: transform 250ms ease-in-out;
+}
+
+.toggle:hover p{
+  transition: translateX(10px);
+}
+
+.toggle-true h3{
+  transform: rotate(90deg);
+}
+
+.product-title {
+  text-transform: uppercase;
 }
 
 @keyframes App-logo-spin {

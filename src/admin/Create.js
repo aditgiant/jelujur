@@ -11,11 +11,19 @@ class Create extends Component {
     this.state = {
       title: '',
       category:'',
+      price:'',
+      care:'',
+      sizeGuide:'',
+      howToOrder:'',
       imageBucket: null,
       image:'',
       moreImageBucket: null,
       moreImage:'',
-      description: ''
+      description1: '',
+      description2: '',
+      material1: '',
+      material2: '',
+      material3: '',
     };
     this.onChange = this.onChange.bind(this);
     this.onImageChange = this.onImageChange.bind(this);
@@ -75,23 +83,39 @@ class Create extends Component {
   onSubmit = (e) => {
     e.preventDefault();
 
-    const { title, category, image, moreImage, description } = this.state;
+    const { title, category, price, care, sizeGuide, howToOrder, image, moreImage, description1, description2, material1, material2, material3 } = this.state;
 
     this.ref.add({
       title,
       category,
+      price,
+      care,
+      sizeGuide,
+      howToOrder,
       image,
       moreImage,
-      description
+      description1,
+      description2,
+      material1,
+      material2,
+      material3,
     }).then((docRef) => {
       this.setState({
         title: '',
-        categery:'',
+        category:'',
+        price:'',
+        care:'',
+        sizeGuide:'',
+        howToOrder:'',
         imageBucket: null,
         image:'',
         moreImageBucket: null,
         moreImage: '',
-        description: ''
+        description1: '',
+        description2: '',
+        material1: '',
+        material2: '',
+        material3: '',
       });
       this.props.history.push("/admin/")
     })
@@ -101,7 +125,7 @@ class Create extends Component {
   }
 
   render() {
-    const { title, category, imageBucket, image, moreImageBucket, moreImage, description } = this.state;
+    const { title, category, price, care, sizeGuide, howToOrder, imageBucket, image, moreImageBucket, moreImage, description1, description2, material1, material2, material3  } = this.state;
     return (
       <div class="container">
         <div class="panel panel-default">
@@ -126,18 +150,50 @@ class Create extends Component {
                 {this.state.image !== '' && <label for="imageBucket">Change main image:</label>}
                 <input type="file" class="form-control" name="imageBucket" onChange={this.onImageChange} />
                 <button type="button" onClick={this.handleUpload}>Upload</button>
+                {this.state.image !== '' && <><img id="thumbnail" src={this.state.image}/><br/><br/></>}
               </div>
-              {this.state.image !== '' && <><img id="thumbnail" src={this.state.image}/><br/><br/></>}
               <div class="form-group">
                 {this.state.image === '' && <label for="imageBucket">Upload more images:</label>}
                 {this.state.image !== '' && <label for="imageBucket">Add more images:</label>}
                 <input type="file" class="form-control" name="moreImageBucket" onChange={this.onImageChange} />
                 <button type="button" onClick={this.handleMoreUpload}>Upload</button>
+                {this.state.moreImage !== '' && <><img id="thumbnail" src={this.state.moreImage}/><br/><br/></>}
               </div>
-              {this.state.moreImage !== '' && <><img id="thumbnail" src={this.state.moreImage}/><br/><br/></>}
               <div class="form-group">
-                <label for="description">Description:</label>
-                <input type="text" class="form-control" name="description" value={description} onChange={this.onChange} placeholder="Description" />
+                <label for="description 1">Description:</label>
+                <input type="text" class="form-control" name="description1" value={description1} onChange={this.onChange} placeholder="Paragraph 1" />
+              </div>
+              <div class="form-group">
+                <label for="description 2">More Description:</label>
+                <input type="text" class="form-control" name="description2" value={description2} onChange={this.onChange} placeholder="Paragraph 2" />
+              </div>
+              <div class="form-group">
+                <label for="material1">Material 1:</label>
+                <input type="text" class="form-control" name="material1" value={material1} onChange={this.onChange} placeholder="Material 1" />
+              </div>
+              <div class="form-group">
+                <label for="material2">Material 2:</label>
+                <input type="text" class="form-control" name="material2" value={material2} onChange={this.onChange} placeholder="Material 2" />
+              </div>
+              <div class="form-group">
+                <label for="material3">Material 3:</label>
+                <input type="text" class="form-control" name="material3" value={material3} onChange={this.onChange} placeholder="Material 3" />
+              </div>
+              <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="number" class="form-control" name="price" value={price} onChange={this.onChange} placeholder="Price" />
+              </div>
+              <div class="form-group">
+                <label for="care">Care:</label>
+                <input type="text" class="form-control" name="care" value={care} onChange={this.onChange} placeholder="Care" />
+              </div>
+              <div class="form-group">
+                <label for="sizeGuide">Size Guide:</label>
+                <input type="text" class="form-control" name="sizeGuide" value={sizeGuide} onChange={this.onChange} placeholder="Size Guide" />
+              </div>
+              <div class="form-group">
+                <label for="howToOrder">How To Order:</label>
+                <input type="text" class="form-control" name="howToOrder" value={howToOrder} onChange={this.onChange} placeholder="How To Order" />
               </div>
               <button onClick={this.onSubmit} type="submit" class="btn btn-success">Submit</button>
             </form>

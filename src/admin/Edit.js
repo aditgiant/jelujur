@@ -9,12 +9,20 @@ class AdminEdit extends Component {
     this.state = {
       key: '',
       title: '',
-      category: '',
-      image: '',
-      imageBucket:'',
-      moreImage: '',
-      moreImageBucket:'',
-      description: ''
+      category:'',
+      price:'',
+      care:'',
+      sizeGuide:'',
+      howToOrder:'',
+      imageBucket: null,
+      image:'',
+      moreImageBucket: null,
+      moreImage:'',
+      description1: '',
+      description2: '',
+      material1: '',
+      material2: '',
+      material3: '',
     };
     this.onChange = this.onChange.bind(this);
     this.onImageChange = this.onImageChange.bind(this);
@@ -32,9 +40,17 @@ class AdminEdit extends Component {
           key: doc.id,
           title: board.title,
           category: board.category,
+          price:board.price,
+          care:board.care,
+          sizeGuide:board.sizeGuide,
+          howToOrder:board.howToOrder,
           image: board.image,
           moreImage: board.moreImage,
-          description: board.description
+          description1: board.description1,
+          description2: board.description2,
+          material1: board.material1,
+          material2: board.material2,
+          material3: board.material3,
         });
       } else {
         console.log("No such document!");
@@ -102,26 +118,41 @@ class AdminEdit extends Component {
   onSubmit = (e) => {
     e.preventDefault();
 
-    const { title, category, image, moreImage, description } = this.state;
+    const { title, category, price, care, sizeGuide, howToOrder, image, moreImage, description1, description2, material1, material2, material3 } = this.state;
 
     const updateRef = fire.firestore().collection('Products').doc(this.state.key);
     updateRef.set({
       title,
       category,
+      price,
+      care,
+      sizeGuide,
+      howToOrder,
       image,
       moreImage,
-      description
+      description1,
+      description2,
+      material1,
+      material2,
+      material3
     }).then((docRef) => {
       this.setState({
         key: '',
         title: '',
-        category: '',
-        image: '',
+        category:'',
+        price:'',
+        care:'',
+        sizeGuide:'',
+        howToOrder:'',
         imageBucket: null,
         image:'',
         moreImageBucket: null,
         moreImage:'',
-        description: ''
+        description1: '',
+        description2: '',
+        material1: '',
+        material2: '',
+        material3: '',
       });
       this.props.history.push("/adminshow/"+this.props.match.params.id)
     })
@@ -177,8 +208,40 @@ class AdminEdit extends Component {
                 <button type="button" onClick={this.handleMoreUpload}>Upload</button>
               </div>
               <div class="form-group">
-                <label for="description">Description:</label>
-                <input type="text" class="form-control" name="description" value={this.state.description} onChange={this.onChange} placeholder="Description" />
+                <label for="description 1">Description:</label>
+                <input type="text" class="form-control" name="description1" value={this.state.description1} onChange={this.onChange} placeholder="Paragraph 1" />
+              </div>
+              <div class="form-group">
+                <label for="description 2">More Description:</label>
+                <input type="text" class="form-control" name="description2" value={this.state.description2} onChange={this.onChange} placeholder="Paragraph 2" />
+              </div>
+              <div class="form-group">
+                <label for="material1">Material 1:</label>
+                <input type="text" class="form-control" name="material1" value={this.state.material1} onChange={this.onChange} placeholder="Material 1" />
+              </div>
+              <div class="form-group">
+                <label for="material2">Material 2:</label>
+                <input type="text" class="form-control" name="material2" value={this.state.material2} onChange={this.onChange} placeholder="Material 2" />
+              </div>
+              <div class="form-group">
+                <label for="material3">Material 3:</label>
+                <input type="text" class="form-control" name="material3" value={this.state.material3} onChange={this.onChange} placeholder="Material 3" />
+              </div>
+              <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="number" class="form-control" name="price" value={this.state.price} onChange={this.onChange} placeholder="Price" />
+              </div>
+              <div class="form-group">
+                <label for="care">Care:</label>
+                <input type="text" class="form-control" name="care" value={this.state.care} onChange={this.onChange} placeholder="Care" />
+              </div>
+              <div class="form-group">
+                <label for="sizeGuide">Size Guide:</label>
+                <input type="text" class="form-control" name="sizeGuide" value={this.state.sizeGuide} onChange={this.onChange} placeholder="Size Guide" />
+              </div>
+              <div class="form-group">
+                <label for="howToOrder">How To Order:</label>
+                <input type="text" class="form-control" name="howToOrder" value={this.state.howToOrder} onChange={this.onChange} placeholder="How To Order" />
               </div>
               <button type="submit" class="btn btn-success">Submit</button>
             </form>
