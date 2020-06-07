@@ -122,7 +122,7 @@ class Product extends Component {
             </div>
               <Collapse in={this.state.sizeExpand}>
               <div id="toggle-content">
-            <table class="table table-bordered" border="1" bordercolor="#a17C63">
+            {/* <table class="table table-bordered" border="1" bordercolor="#a17C63">
               <thead>
                 <tr>
                   <th><p>Measurement</p></th>
@@ -155,8 +155,10 @@ class Product extends Component {
                     <td><p>106 cm</p></td>
                   </tr>
               </tbody>
-            </table>
-                {/* <img src={SizeChart}/> */}
+            </table> */}
+                <img src={SizeChart}/>
+                <br/>
+                <br/>
                 </div>
               </Collapse>
             <div className={"toggle toggle-"+this.state.orderExpand} onClick = {this.handleOrderExpand}>

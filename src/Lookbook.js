@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import {Container, Row, Col} from 'react-bootstrap';
 import Header from './header';
+import Loading from './Loading'
 import Fade from 'react-reveal/Fade';
 import fire from './admin/Fire';
 
@@ -43,6 +44,8 @@ class Lookbook extends Component {
 
     render() {
         return (
+        <>
+        <Loading/>
         <div>
         <Header/>
         <Container id="catalog-content">
@@ -60,6 +63,7 @@ class Lookbook extends Component {
           {/* </div> */}
         </Container>
         </div>
+        </>
         );
     }
 
