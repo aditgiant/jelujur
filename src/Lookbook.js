@@ -49,7 +49,7 @@ class Lookbook extends Component {
           {/* <div id="lookbook"> */}
             {this.state.boards.map(board =>
                   <div id='product-list'>
-                    <Link to={`/jelujur/product/${board.key}`}>
+                    <Link to={process.env.PUBLIC_URL + '/jelujur/product/${board.key'}>
                       <div id='product-hover'>
                         <h3>View <br/><strong>{board.title}</strong></h3>
                       </div>
