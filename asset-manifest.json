@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/jelujur/static/css/main.d6281817.chunk.css",
+    "main.js": "/jelujur/static/js/main.17a36216.chunk.js",
+    "main.js.map": "/jelujur/static/js/main.17a36216.chunk.js.map",
+    "runtime-main.js": "/jelujur/static/js/runtime-main.b8047482.js",
+    "runtime-main.js.map": "/jelujur/static/js/runtime-main.b8047482.js.map",
+    "static/css/2.69121389.chunk.css": "/jelujur/static/css/2.69121389.chunk.css",
+    "static/js/2.b4928018.chunk.js": "/jelujur/static/js/2.b4928018.chunk.js",
+    "static/js/2.b4928018.chunk.js.map": "/jelujur/static/js/2.b4928018.chunk.js.map",
+    "index.html": "/jelujur/index.html",
+    "precache-manifest.aa4d6897a016345bcc30173039cd61c9.js": "/jelujur/precache-manifest.aa4d6897a016345bcc30173039cd61c9.js",
+    "service-worker.js": "/jelujur/service-worker.js",
+    "static/css/2.69121389.chunk.css.map": "/jelujur/static/css/2.69121389.chunk.css.map",
+    "static/css/main.d6281817.chunk.css.map": "/jelujur/static/css/main.d6281817.chunk.css.map",
+    "static/js/2.b4928018.chunk.js.LICENSE.txt": "/jelujur/static/js/2.b4928018.chunk.js.LICENSE.txt",
+    "static/media/Decorating_plants.png": "/jelujur/static/media/Decorating_plants.93a9ed1a.png",
+    "static/media/Hanger_big_screen.png": "/jelujur/static/media/Hanger_big_screen.fd7ebfd5.png",
+    "static/media/App.css": "/jelujur/static/media/HomeWallpaper.8b0d71dc.jpg",
+    "static/media/Jelujur_logoori.gif": "/jelujur/static/media/Jelujur_logoori.74d4035d.gif",
+    "static/media/Product_1.png": "/jelujur/static/media/Product_1.050e18c6.png",
+    "static/media/Product_2.png": "/jelujur/static/media/Product_2.3e106764.png",
+    "static/media/Product_3.png": "/jelujur/static/media/Product_3.89f2ea36.png",
+    "static/media/Product_4.png": "/jelujur/static/media/Product_4.f28ff88d.png",
+    "static/media/Product_5.png": "/jelujur/static/media/Product_5.0f95205e.png",
+    "static/media/arrow.gif": "/jelujur/static/media/arrow.62dbc37e.gif",
+    "static/media/hanger_spotlight.png": "/jelujur/static/media/hanger_spotlight.5e991ab0.png",
+    "static/media/logo.svg": "/jelujur/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b8047482.js",
+    "static/css/2.69121389.chunk.css",
+    "static/js/2.b4928018.chunk.js",
+    "static/css/main.d6281817.chunk.css",
+    "static/js/main.17a36216.chunk.js"
+  ]
+}
