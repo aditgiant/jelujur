@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/jelujur/static/css/main.bff41a4d.chunk.css",
-    "main.js": "/jelujur/static/js/main.220f258c.chunk.js",
-    "main.js.map": "/jelujur/static/js/main.220f258c.chunk.js.map",
+    "main.css": "/jelujur/static/css/main.6d6e355d.chunk.css",
+    "main.js": "/jelujur/static/js/main.8d3f45db.chunk.js",
+    "main.js.map": "/jelujur/static/js/main.8d3f45db.chunk.js.map",
     "runtime-main.js": "/jelujur/static/js/runtime-main.b8047482.js",
     "runtime-main.js.map": "/jelujur/static/js/runtime-main.b8047482.js.map",
     "static/css/2.69121389.chunk.css": "/jelujur/static/css/2.69121389.chunk.css",
-    "static/js/2.d8b85a4a.chunk.js": "/jelujur/static/js/2.d8b85a4a.chunk.js",
-    "static/js/2.d8b85a4a.chunk.js.map": "/jelujur/static/js/2.d8b85a4a.chunk.js.map",
+    "static/js/2.60818624.chunk.js": "/jelujur/static/js/2.60818624.chunk.js",
+    "static/js/2.60818624.chunk.js.map": "/jelujur/static/js/2.60818624.chunk.js.map",
     "index.html": "/jelujur/index.html",
-    "precache-manifest.f3e694466479e8164a2c0b226043adf8.js": "/jelujur/precache-manifest.f3e694466479e8164a2c0b226043adf8.js",
+    "precache-manifest.bf66906aecb4bf209980e91b341316be.js": "/jelujur/precache-manifest.bf66906aecb4bf209980e91b341316be.js",
     "service-worker.js": "/jelujur/service-worker.js",
     "static/css/2.69121389.chunk.css.map": "/jelujur/static/css/2.69121389.chunk.css.map",
-    "static/css/main.bff41a4d.chunk.css.map": "/jelujur/static/css/main.bff41a4d.chunk.css.map",
-    "static/js/2.d8b85a4a.chunk.js.LICENSE.txt": "/jelujur/static/js/2.d8b85a4a.chunk.js.LICENSE.txt",
+    "static/css/main.6d6e355d.chunk.css.map": "/jelujur/static/css/main.6d6e355d.chunk.css.map",
+    "static/js/2.60818624.chunk.js.LICENSE.txt": "/jelujur/static/js/2.60818624.chunk.js.LICENSE.txt",
     "static/media/Decorating_plants.png": "/jelujur/static/media/Decorating_plants.93a9ed1a.png",
     "static/media/Hanger_big_screen.png": "/jelujur/static/media/Hanger_big_screen.fd7ebfd5.png",
     "static/media/App.css": "/jelujur/static/media/HomeWallpaper.8b0d71dc.jpg",
     "static/media/Jelujur_logoori.gif": "/jelujur/static/media/Jelujur_logoori.74d4035d.gif",
+    "static/media/Jelujur_logospeedup.gif": "/jelujur/static/media/Jelujur_logospeedup.afaf5c37.gif",
     "static/media/Product_1.png": "/jelujur/static/media/Product_1.050e18c6.png",
     "static/media/Product_2.png": "/jelujur/static/media/Product_2.3e106764.png",
     "static/media/Product_3.png": "/jelujur/static/media/Product_3.89f2ea36.png",
@@ -31,8 +32,8 @@
   "entrypoints": [
     "static/js/runtime-main.b8047482.js",
     "static/css/2.69121389.chunk.css",
-    "static/js/2.d8b85a4a.chunk.js",
-    "static/css/main.bff41a4d.chunk.css",
-    "static/js/main.220f258c.chunk.js"
+    "static/js/2.60818624.chunk.js",
+    "static/css/main.6d6e355d.chunk.css",
+    "static/js/main.8d3f45db.chunk.js"
   ]
 }
