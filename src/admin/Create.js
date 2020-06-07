@@ -13,6 +13,9 @@ class Create extends Component {
       category:'',
       price:'',
       care:'',
+      care2:'',
+      care3:'',
+      care4:'',
       sizeGuide:'',
       howToOrder:'',
       imageBucket: null,
@@ -83,13 +86,16 @@ class Create extends Component {
   onSubmit = (e) => {
     e.preventDefault();
 
-    const { title, category, price, care, sizeGuide, howToOrder, image, moreImage, description1, description2, material1, material2, material3 } = this.state;
+    const { title, category, price, care, care2, care3, care4, sizeGuide, howToOrder, image, moreImage, description1, description2, material1, material2, material3 } = this.state;
 
     this.ref.add({
       title,
       category,
       price,
       care,
+      care2,
+      care3,
+      care4,
       sizeGuide,
       howToOrder,
       image,
@@ -105,6 +111,9 @@ class Create extends Component {
         category:'',
         price:'',
         care:'',
+        care2:'',
+        care3:'',
+        care4:'',
         sizeGuide:'',
         howToOrder:'',
         imageBucket: null,
@@ -125,7 +134,7 @@ class Create extends Component {
   }
 
   render() {
-    const { title, category, price, care, sizeGuide, howToOrder, imageBucket, image, moreImageBucket, moreImage, description1, description2, material1, material2, material3  } = this.state;
+    const { title, category, price, care, care2, care3, care4, sizeGuide, howToOrder, imageBucket, image, moreImageBucket, moreImage, description1, description2, material1, material2, material3  } = this.state;
     return (
       <div class="container">
         <div class="panel panel-default">
@@ -184,8 +193,20 @@ class Create extends Component {
                 <input type="number" class="form-control" name="price" value={price} onChange={this.onChange} placeholder="Price" />
               </div>
               <div class="form-group">
-                <label for="care">Care:</label>
+                <label for="care">Care 1:</label>
                 <input type="text" class="form-control" name="care" value={care} onChange={this.onChange} placeholder="Care" />
+              </div>
+              <div class="form-group">
+                <label for="care2">Care 2:</label>
+                <input type="text" class="form-control" name="care2" value={care2} onChange={this.onChange} placeholder="Care 2" />
+              </div>
+              <div class="form-group">
+                <label for="care3">Care 3:</label>
+                <input type="text" class="form-control" name="care3" value={care3} onChange={this.onChange} placeholder="Care3" />
+              </div>
+              <div class="form-group">
+                <label for="care4">Care 4:</label>
+                <input type="text" class="form-control" name="care4" value={care4} onChange={this.onChange} placeholder="Care4" />
               </div>
               <div class="form-group">
                 <label for="sizeGuide">Size Guide:</label>

@@ -42,6 +42,9 @@ class AdminEdit extends Component {
           category: board.category,
           price:board.price,
           care:board.care,
+          care2:board.care2,
+          care3:board.care3,
+          care4:board.care4,
           sizeGuide:board.sizeGuide,
           howToOrder:board.howToOrder,
           image: board.image,
@@ -118,7 +121,7 @@ class AdminEdit extends Component {
   onSubmit = (e) => {
     e.preventDefault();
 
-    const { title, category, price, care, sizeGuide, howToOrder, image, moreImage, description1, description2, material1, material2, material3 } = this.state;
+    const { title, category, price, care, care2, care3, care4, sizeGuide, howToOrder, image, moreImage, description1, description2, material1, material2, material3 } = this.state;
 
     const updateRef = fire.firestore().collection('Products').doc(this.state.key);
     updateRef.set({
@@ -126,6 +129,9 @@ class AdminEdit extends Component {
       category,
       price,
       care,
+      care2,
+      care3,
+      care4,
       sizeGuide,
       howToOrder,
       image,
@@ -142,6 +148,9 @@ class AdminEdit extends Component {
         category:'',
         price:'',
         care:'',
+        care2:'',
+        care3:'',
+        care4:'',
         sizeGuide:'',
         howToOrder:'',
         imageBucket: null,
@@ -232,8 +241,20 @@ class AdminEdit extends Component {
                 <input type="number" class="form-control" name="price" value={this.state.price} onChange={this.onChange} placeholder="Price" />
               </div>
               <div class="form-group">
-                <label for="care">Care:</label>
+                <label for="care">Care 1:</label>
                 <input type="text" class="form-control" name="care" value={this.state.care} onChange={this.onChange} placeholder="Care" />
+              </div>
+              <div class="form-group">
+                <label for="care2">Care 2:</label>
+                <input type="text" class="form-control" name="care2" value={this.state.care2} onChange={this.onChange} placeholder="Care 2" />
+              </div>
+              <div class="form-group">
+                <label for="care3">Care 3:</label>
+                <input type="text" class="form-control" name="care3" value={this.state.care3} onChange={this.onChange} placeholder="Care 3" />
+              </div>
+              <div class="form-group">
+                <label for="care4">Care 4:</label>
+                <input type="text" class="form-control" name="care4" value={this.state.care4} onChange={this.onChange} placeholder="Care 4" />
               </div>
               <div class="form-group">
                 <label for="sizeGuide">Size Guide:</label>

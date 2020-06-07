@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
+import SizeChart from './imgsrc/Size_chart.jpeg';
 import Collapse from 'react-bootstrap/Collapse'
 import NumberFormat from 'react-number-format';
 import fire from './admin/Fire';
@@ -91,10 +92,10 @@ class Product extends Component {
         {this.state.board.moreImage !== '' && <div id="navigation-thumbnail" className={imageActive} onClick={this.handleMouseDown}><h1>&gt;</h1></div>}
         </Col>
         <Col sm='4' id="product-description">
-            <h4 class="product-title">
+            <strong><h5 class="product-title">
                 {this.state.board.title}
-            </h4>
-            <h5><NumberFormat value={this.state.board.price} displayType={'text'} thousandSeparator={'.'} decimalSeparator={','} suffix={' IDR'} /></h5>
+            </h5>
+            <h6><NumberFormat value={this.state.board.price} displayType={'text'} thousandSeparator={'.'} decimalSeparator={','} suffix={' IDR'} /></h6></strong>
             <br/>
             <p>{this.state.board.description1}</p>
             <p>{this.state.board.description2}</p>
@@ -104,25 +105,68 @@ class Product extends Component {
             {this.state.board.material3}</p>
             <br/>
             <div className={"toggle toggle-"+this.state.careExpand} onClick = {this.handleCareExpand}>
-              <h3>&gt;</h3>
-              <p>&nbsp;CARE</p>
+              <strong><h3>&gt;</h3>
+              <p>&nbsp;CARE</p></strong>
             </div>
               <Collapse in={this.state.careExpand}>
-                <p>{this.state.board.care}</p>
+                <div id="toggle-content">
+                <p>{this.state.board.care}
+                <br/>{this.state.board.care2}
+                <br/>{this.state.board.care3}
+                <br/>{this.state.board.care4}</p>
+                </div>
               </Collapse>
             <div className={"toggle toggle-"+this.state.sizeExpand} onClick = {this.handleSizeExpand}>
-              <h3>&gt;</h3>
-              <p>&nbsp;SIZE GUIDE</p>
+              <strong><h3>&gt;</h3>
+              <p>&nbsp;SIZE GUIDE</p></strong>
             </div>
               <Collapse in={this.state.sizeExpand}>
-                <p>{this.state.board.sizeGuide}</p>
+              <div id="toggle-content">
+            <table class="table table-bordered" border="1" bordercolor="#a17C63">
+              <thead>
+                <tr>
+                  <th><p>Measurement</p></th>
+                  <th><p>&nbsp;&nbsp;S&nbsp;&nbsp;</p></th>
+                  <th><p>&nbsp;&nbsp;M&nbsp;&nbsp;</p></th>
+                  <th><p>&nbsp;&nbsp;L&nbsp;&nbsp;</p></th>
+                  <th><p>XL</p></th>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                    <td><p>Bust</p></td>
+                    <td><p>84 cm</p></td>
+                    <td><p>89 cm</p></td>
+                    <td><p>94 cm</p></td>
+                    <td><p>99 cm</p></td>
+                  </tr>
+                  <tr>
+                    <td><p>Waist</p></td>
+                    <td><p>65 cm</p></td>
+                    <td><p>70 cm</p></td>
+                    <td><p>75 cm</p></td>
+                    <td><p>80 cm</p></td>
+                  </tr>
+                  <tr>
+                    <td><p>Hip</p></td>
+                    <td><p>91 cm</p></td>
+                    <td><p>96 cm</p></td>
+                    <td><p>101 cm</p></td>
+                    <td><p>106 cm</p></td>
+                  </tr>
+              </tbody>
+            </table>
+                {/* <img src={SizeChart}/> */}
+                </div>
               </Collapse>
             <div className={"toggle toggle-"+this.state.orderExpand} onClick = {this.handleOrderExpand}>
-              <h3>&gt;</h3>
-              <p>&nbsp;HOW TO ORDER</p>
+              <strong><h3>&gt;</h3>
+              <p>&nbsp;HOW TO ORDER</p></strong>
             </div>
               <Collapse in={this.state.orderExpand}>
-                <p>{this.state.board.howToOrder}</p>
+                <div id="toggle-content">
+                  <p>{this.state.board.howToOrder}</p>
+                </div>
               </Collapse>
         </Col>
         </Row>
