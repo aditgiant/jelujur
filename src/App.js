@@ -10,7 +10,7 @@ import AdminEdit from './admin/Edit';
 import AdminCreate from './admin/AdminCreate';
 import AdminShow from './admin/Show'
 import logo from './logo.svg';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {HashRouter as Router, Switch, Route} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -20,7 +20,7 @@ class App extends Component {
   return (
     <div>
     <Welcome/>
-    <Router basename="/jelujur/">
+    <Router>
       <Sidebar/>
       <Switch>
       <Route path='/' exact component={Display}/>

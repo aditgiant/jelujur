@@ -37,11 +37,11 @@ class Sidebar extends Component {
         <div id="flyoutMenu"
            onClick={this.handleMouseDown} 
            className={visibility}>
-        <Link style={{ textDecoration: 'none' }} to={process.env.PUBLIC_URL + '/'}><h3><a>HOME</a></h3></Link>
+        <Link style={{ textDecoration: 'none' }} to='/'><h3><a>HOME</a></h3></Link>
         {/* <Link style={{ textDecoration: 'none' }} to={process.env.PUBLIC_URL + '/admin'}><h3><a>Admin</a></h3></Link> */}
-        <Link style={{ textDecoration: 'none' }} to={process.env.PUBLIC_URL + '/aboutus'}><h3><a>ABOUT US</a></h3></Link>
+        <Link style={{ textDecoration: 'none' }} to='/aboutus'><h3><a>ABOUT US</a></h3></Link>
         <h3><a href="#">SHOP NOW</a></h3>
-        <Link style={{ textDecoration: 'none' }} to={process.env.PUBLIC_URL + '/collections'}><h3><a href="#">COLLECTIONS</a></h3></Link>
+        <Link style={{ textDecoration: 'none' }} to='/collections'><h3><a href="#">COLLECTIONS</a></h3></Link>
         <h3><a href="#">CONTACT US</a></h3>
       </div>
       </div>

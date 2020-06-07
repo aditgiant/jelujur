@@ -79,7 +79,7 @@ class Product extends Component {
         <Header/>
         <Container id="product-content">
         <Row><Col sm='2' id="back-to-catalog">
-            <Link to="/jelujur/collections"><h3> &lt;</h3><p>&nbsp;Back to Collections</p></Link>
+            <Link to="/collections"><h3> &lt;</h3><p>&nbsp;Back to Collections</p></Link>
         </Col>
         <Col sm='5' id="product-thumbnail">
           <div className="thumbnails">

@@ -104,6 +104,7 @@ div a {
 }
 
 .discover-hover {
+  cursor:pointer;
   transition: transform 250ms ease-in-out;
   display:inline-block;
 }

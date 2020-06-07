@@ -21,6 +21,11 @@ const CarouselUI = ({ children }) => <CarouselDiv fluid>{children}</CarouselDiv>
 const Carousel = makeCarousel(CarouselUI);
 
 export default class Home extends Component {
+    scrollToDisplay(){
+        console.log("Clicked!");
+        window.scrollTo(0, window.innerHeight);
+        console.log("Clicked!");
+    };
     render() {
     return (
         <div>
@@ -53,7 +58,7 @@ export default class Home extends Component {
             </Roll>
             </Container>
             <div className="discover">
-                <a className="discover-hover"href="#display">
+                <a className="discover-hover" onClick={() => this.scrollToDisplay()}>
                 <h3 className="text-discover">DISCOVER <br/></h3>
                 <div className="arrow-holder">
                     <img className="arrow" src={Arrow} alt='Discover'/>
