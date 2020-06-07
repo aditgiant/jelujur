@@ -20,7 +20,7 @@ class App extends Component {
   return (
     <div>
     <Welcome/>
-    <Router basename={`${process.env.PUBLIC_URL}/`}>
+    <Router basename="/jelujur/">
       <Sidebar/>
       <Switch>
       <Route path='/' exact component={Display}/>
