@@ -11,6 +11,7 @@ import AdminCreate from './admin/AdminCreate';
 import AdminShow from './admin/Show'
 import logo from './logo.svg';
 import {HashRouter as Router, Switch, Route} from 'react-router-dom';
+import {createBrowserHistory} from 'history';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -20,7 +21,7 @@ class App extends Component {
   return (
     <div>
     <Welcome/>
-    <Router>
+    <Router onUpdate={() => window.scrollTo(0, 0)} history={createBrowserHistory()}>
       <Sidebar/>
       <Switch>
       <Route path='/' exact component={Display}/>

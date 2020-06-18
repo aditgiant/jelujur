@@ -13,6 +13,12 @@ class Sidebar extends Component {
         this.toggleMenu = this.toggleMenu.bind(this);
       }
       
+      scrollToBottom(){
+        console.log("Clicked!");
+        window.scrollTo(0, document.body.scrollHeight);
+        console.log("Clicked!");
+      };
+
       handleMouseDown(e) {
         this.toggleMenu();
      
@@ -42,7 +48,7 @@ class Sidebar extends Component {
         <Link style={{ textDecoration: 'none' }} to='/aboutus'><h3><a>ABOUT US</a></h3></Link>
         <h3><a href="#">SHOP NOW</a></h3>
         <Link style={{ textDecoration: 'none' }} to='/collections'><h3><a href="#">COLLECTIONS</a></h3></Link>
-        <h3><a href="#">CONTACT US</a></h3>
+        <h3><a onClick={() => this.scrollToBottom()}>CONTACT US</a></h3>
       </div>
       </div>
     );

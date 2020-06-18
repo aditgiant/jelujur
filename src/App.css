@@ -375,6 +375,7 @@ img.product4:hover {
   color: #333;
   text-align: center;
   text-decoration: none;
+  cursor: pointer;
 }
  
 #flyoutMenu h3:hover {
@@ -440,6 +441,52 @@ img.product4:hover {
 
 #header img:hover {
   transform: scale(1.1)
+}
+
+#footer {
+  /* background: #ffffff; */
+  width: 100%;
+  display:inline-block;
+  text-align:center;
+}
+
+#footer img {
+  max-height: 45px;
+  margin-top:15px;
+  margin-bottom:15px;
+  cursor: pointer;
+  transition: transform 250ms ease-in-out;
+}
+
+#footer img:hover {
+  transform: scale(1.1)
+}
+
+#footer-link > div > div {
+  text-align: center;
+  display:inline-block;
+}
+
+#footer-link > div > div > a {
+  color: #000000;
+}
+
+#footer-link > div > div > a > p{
+  font-family: 'Manrope', sans-serif;
+  text-align: center;
+  font-size:0.5em;
+  text-transform: uppercase;
+  display:inline-block;
+  cursor: pointer;
+  transition: transform 250ms ease-in-out;
+}
+
+#footer-link > div > div > a > p:hover{
+  transform: scale(1.1)
+}
+
+#line-footer {
+  width:80%;
 }
 
 #aboutus-background{
@@ -549,11 +596,16 @@ img.product4:hover {
 
 #back-to-catalog a:hover>h3{
   transform:translateX(-20px);
+  color:#C59A39;
 }
 
 #back-to-catalog a>p{
   font-size:1em;
   display: inline;
+}
+
+#back-to-catalog a:hover>p{
+  color:#C59A39;
 }
 
 #product-thumbnail {
@@ -667,6 +719,147 @@ img.product4:hover {
 .toggle-true h3{
   transform: rotate(90deg);
 }
+
+.orderpopup {
+  z-index: 999;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #d3d1d1a6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  transition: transform 0.75s ease-in-out, opacity 0.75s ease-in-out;
+}
+
+#orderpopup-false {
+  transform:translateX(100vw);
+  opacity:0;
+  transition-delay: 1s;
+}
+
+#orderpopup-true {
+  transform:translateX(0);
+  opacity:1;
+}
+
+.order-formbox {
+  border-radius: 10px;
+  padding:20px;
+  height:75vh;
+  overflow-y:auto;
+  display:inline-block;
+  background: #ffffff;
+  position: relative;
+}
+
+#order-formbox-close {
+  position: absolute;
+  right: 40px;
+  top:30px;
+  cursor: pointer;
+}
+
+#order-formbox-title{
+  color:#C59A39;
+  font-size:1.5em;
+  text-align:left;
+}
+
+#order-formbody {
+  width:50vw;
+  font-size: 0.65em;
+}
+
+#order-form-message {
+  height:25vh;
+}
+
+#product-form > div > input {
+  font-size: 0.8em;
+}
+
+#product-form > div > input::placeholder{
+  opacity: 0.5;
+}
+
+#product-form > div > textarea {
+  font-size: 0.8em;
+}
+
+#product-form > div > textarea::placeholder{
+  opacity: 0.5;
+}
+
+#form-order-submit{
+  display:inline-block;
+  text-align:right;
+  position: relative;
+  z-index: 50;
+  text-decoration:none;
+  font-family:'Manrope';
+  font-size:1em;
+  color:#231f20;
+  cursor: pointer;
+}
+
+#form-order-submitted{
+  display:inline-block;
+  text-align:right;
+  position: relative;
+  z-index: 50;
+  text-decoration:none;
+  font-family:'Manrope';
+  font-size:1em;
+}
+
+#form-order-submitted > p{
+  color:#4CAF50;
+  font-size: 1.5em;
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) forwards;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+#form-order-submit >h3{
+  font-size:1.5em;
+  display: inline-block;
+  transition: transform 150ms ease-in-out;
+}
+
+#form-order-submit:hover > h3{
+  transform:translateX(20px);
+  color:#C59A39;
+}
+
+#form-order-submit:hover > p{
+  color:#C59A39;
+}
+
+#form-order-submit >p{
+  font-size:1.5em;
+  display: inline;
+}
+
 
 #toggle-content {
   /* display:inline-block; */

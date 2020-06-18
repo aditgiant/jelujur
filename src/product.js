@@ -6,6 +6,8 @@ import NumberFormat from 'react-number-format';
 import fire from './admin/Fire';
 import { Link } from 'react-router-dom';
 import Header from './header';
+import Footer from './footer';
+import OrderForm from './orderform';
 import Fade from 'react-reveal/Fade';
 
 class Product extends Component {
@@ -165,14 +167,16 @@ class Product extends Component {
               <strong><h3>&gt;</h3>
               <p>&nbsp;HOW TO ORDER</p></strong>
             </div>
-              <Collapse in={this.state.orderExpand}>
-                <div id="toggle-content">
-                  <p>{this.state.board.howToOrder}</p>
-                </div>
-              </Collapse>
+            <div className="orderpopup" id={"orderpopup-"+this.state.orderExpand}>
+                <OrderForm handleOrderExpand={this.handleOrderExpand}
+                           orderExpand={this.state.orderExpand}
+                           product={this.state.board.title}
+                           />
+            </div>
         </Col>
         </Row>
         </Container>
+        <Footer/>
         </div>
     );
   }

@@ -1,5 +1,6 @@
 import React, { Component, useRef, useState, useEffect } from 'react';
 import Home from './home';
+import Footer from './footer';
 import {Container, Row, Col} from 'react-bootstrap';
 import DisplayHanger from './imgsrc/hanger_spotlight.png';
 import DisplayHanger2 from './imgsrc/Hanger_big_screen.png';
@@ -139,6 +140,7 @@ export default function Display() {
                 </Container>
                 </Fade>
                 </div>
+                <Footer/>
             </section>
             </>
     );
