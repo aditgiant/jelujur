@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/jelujur/static/css/main.6d6e355d.chunk.css",
-    "main.js": "/jelujur/static/js/main.8d3f45db.chunk.js",
-    "main.js.map": "/jelujur/static/js/main.8d3f45db.chunk.js.map",
+    "main.css": "/jelujur/static/css/main.26331638.chunk.css",
+    "main.js": "/jelujur/static/js/main.367b50e9.chunk.js",
+    "main.js.map": "/jelujur/static/js/main.367b50e9.chunk.js.map",
     "runtime-main.js": "/jelujur/static/js/runtime-main.b8047482.js",
     "runtime-main.js.map": "/jelujur/static/js/runtime-main.b8047482.js.map",
     "static/css/2.69121389.chunk.css": "/jelujur/static/css/2.69121389.chunk.css",
-    "static/js/2.60818624.chunk.js": "/jelujur/static/js/2.60818624.chunk.js",
-    "static/js/2.60818624.chunk.js.map": "/jelujur/static/js/2.60818624.chunk.js.map",
+    "static/js/2.5094e8ad.chunk.js": "/jelujur/static/js/2.5094e8ad.chunk.js",
+    "static/js/2.5094e8ad.chunk.js.map": "/jelujur/static/js/2.5094e8ad.chunk.js.map",
     "index.html": "/jelujur/index.html",
-    "precache-manifest.bf66906aecb4bf209980e91b341316be.js": "/jelujur/precache-manifest.bf66906aecb4bf209980e91b341316be.js",
+    "precache-manifest.4ea9da4d048cd8bb8c53198550f6f8a0.js": "/jelujur/precache-manifest.4ea9da4d048cd8bb8c53198550f6f8a0.js",
     "service-worker.js": "/jelujur/service-worker.js",
     "static/css/2.69121389.chunk.css.map": "/jelujur/static/css/2.69121389.chunk.css.map",
-    "static/css/main.6d6e355d.chunk.css.map": "/jelujur/static/css/main.6d6e355d.chunk.css.map",
-    "static/js/2.60818624.chunk.js.LICENSE.txt": "/jelujur/static/js/2.60818624.chunk.js.LICENSE.txt",
+    "static/css/main.26331638.chunk.css.map": "/jelujur/static/css/main.26331638.chunk.css.map",
+    "static/js/2.5094e8ad.chunk.js.LICENSE.txt": "/jelujur/static/js/2.5094e8ad.chunk.js.LICENSE.txt",
     "static/media/Decorating_plants.png": "/jelujur/static/media/Decorating_plants.93a9ed1a.png",
     "static/media/Hanger_big_screen.png": "/jelujur/static/media/Hanger_big_screen.fd7ebfd5.png",
     "static/media/App.css": "/jelujur/static/media/HomeWallpaper.8b0d71dc.jpg",
@@ -32,8 +32,8 @@
   "entrypoints": [
     "static/js/runtime-main.b8047482.js",
     "static/css/2.69121389.chunk.css",
-    "static/js/2.60818624.chunk.js",
-    "static/css/main.6d6e355d.chunk.css",
-    "static/js/main.8d3f45db.chunk.js"
+    "static/js/2.5094e8ad.chunk.js",
+    "static/css/main.26331638.chunk.css",
+    "static/js/main.367b50e9.chunk.js"
   ]
 }
