@@ -4,6 +4,7 @@ import About from './About';
 import ShopNow from './ShopNow';
 import Lookbook from './Lookbook';
 import Product from './product';
+import ProductFromCategory from './productfromcategory';
 import Display from './Display';
 import Admin from './admin/Admin';
 import AdminEdit from './admin/Edit';
@@ -14,7 +15,6 @@ import {HashRouter as Router, Switch, Route} from 'react-router-dom';
 import {createBrowserHistory} from 'history';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-
 
 class App extends Component {
   render(){
@@ -28,6 +28,7 @@ class App extends Component {
       <Route path='/shopnow/:filterID' component={ShopNow}/>
       <Route path='/collections/ss2020' component={Lookbook}/>
       <Route path='/product/:id' component={Product}/>
+      <Route path='/productFromCategory/:id' component={ProductFromCategory}/>
       <Route path='/admin' component={Admin}/>
       <Route path='/adminedit/:id' component={AdminEdit} />
       <Route path='/admincreate' component={AdminCreate} />

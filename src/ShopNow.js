@@ -74,7 +74,7 @@ class ShopNow extends Component {
                 <p>Showing items for '{this.state.filterID}' category</p>
                 {this.state.boards.map(board => board.category === this.state.filterID ?
                     (<div id='product-list-shopnow'>
-                        <Link style={{ textDecoration: 'none' }} to={`/product/${board.key}`}>
+                        <Link style={{ textDecoration: 'none' }} to={`/productFromCategory/${board.key}`}>
                             <div id='product-show-shopnow'><img id="thumbnail" src={board.image}/></div>
                             <p><strong>{board.title}</strong><br/>
                             <NumberFormat value={board.price} displayType={'text'} thousandSeparator={'.'} decimalSeparator={','} suffix={' IDR'} /></p>
