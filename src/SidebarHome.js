@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import SidebarButton from './SidebarButton';
+import SidebarButtonHome from './SidebarButtonHome';
 import {Link} from 'react-router-dom';
  
-class Sidebar extends Component {
+class SidebarHome extends Component {
     constructor(props, context) {
         super(props, context);
        
@@ -100,7 +100,7 @@ class Sidebar extends Component {
       }
     return (
       <div id='sidebar-group'>
-        <SidebarButton handleMouseDown={this.handleMouseDown} visible={this.state.visible}/>
+        <SidebarButtonHome handleMouseDown={this.handleMouseDown} visible={this.state.visible}/>
         <div id="flyoutMenu"
            className={visibility}>
             {(mainmenuexpand==="expanded") && <div id="flyoutMenu-page">
@@ -128,4 +128,4 @@ class Sidebar extends Component {
   }
 }
  
-export default Sidebar;
+export default SidebarHome;

@@ -104,10 +104,6 @@ body{
   max-height:300px;
 }
 
-div a {
-  font-family: 'Sacramento', cursive;
-}
-
 .discover {
   bottom:0;
   padding-bottom:25px;
@@ -188,7 +184,6 @@ div a {
   left:0;
   margin:0;
   padding-top:100px;
-  font-family: 'Sacramento', cursive;
 }
 
 .display-cabinet {
@@ -321,7 +316,7 @@ img.product4:hover {
   color: #F5E4DC; 
   text-align: left;
   font-size: 42px;
-  font-family: 'Sacramento', cursive;
+
 }
 .display-detail p{
   color: rgb(87, 80, 76);
@@ -339,11 +334,9 @@ img.product4:hover {
 }
 
 #flyoutMenu {
-  align-items: center;
-  text-align: center;
   width: 30vw;
   height: 100vh;
-  background-color: #feeae1e1;
+  background-color: #feeae1;
   position: fixed;
   top: 0;
   left: 0;
@@ -351,6 +344,7 @@ img.product4:hover {
               cubic-bezier(0, .52, 0, 1);
   overflow: scroll;
   z-index: 200;
+  display:flex;
 }
  
 #flyoutMenu.hide {
@@ -362,25 +356,51 @@ img.product4:hover {
   overflow: hidden;
 }
 
-#flyoutMenu h3 {
+#flyoutMenu-page {
+  width:75%;
+  text-align:left;
+  margin:auto;
+  margin-top:15vh;
+}
+
+.flyoutMenu-item h3 {
   font-size: 1em;
-  margin:50px;
+  margin: 1em;
   opacity:0.6;
   transition: transform 250ms ease-in-out;
-}
- 
-#flyoutMenu h3 a {
-  opacity: 0.6;
   font-family: 'Manrope', sans-serif;  
   color: #333;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
+  display:inline-block;
 }
- 
-#flyoutMenu h3:hover {
-  transform: scale(1.2);
+
+.flyoutMenu-item > #flyoutArrow {
+  opacity: 0;
+} 
+
+.flyoutMenu-item:hover > #flyoutArrow {
+  transform: translateX(20px);
   opacity: 1;
+}
+
+.flyoutMenu-item > #flyoutBackArrow {
+  opacity: 0;
+} 
+
+.flyoutMenu-item:hover > #flyoutBackArrow {
+  transform: translateX(-20px);
+  opacity: 1;
+}
+
+.flyoutMenu-item:hover h3 {
+  opacity: 1;
+  color: #C59A39;
+} 
+
+.flyoutMenu-item:hover > #flyoutArrow {
+  transform: translateX(10px);
 } 
 
 #roundButton {
@@ -416,8 +436,10 @@ img.product4:hover {
   transform: scale(1.3, 1.3);
 }
 
-#roundButton i{
+#roundButton img{
   color: #C59A39;
+  height: 30px;
+  width: 30px;
 }
 
 #header {
@@ -525,6 +547,23 @@ img.product4:hover {
   text-align: center;
 }
 
+#shop-now-show {
+  text-align:left;
+  width:100%;
+}
+
+#product-list-shopnow {
+  position:relative;
+  display: inline-block;
+  flex-wrap: wrap;
+  transition: transform 250ms ease-in-out;
+  margin:20px;
+}
+
+#product-list-shopnow:hover {
+  transform: translateY(-10px);
+}
+
 #product-list {
   margin: 75px;
   position:relative;
@@ -564,6 +603,23 @@ img.product4:hover {
 #product-show img{
   max-height: 500px;
   max-width: 500px;
+}
+
+#product-list-shopnow p {
+  margin-top:10px;
+  margin-bottom:15px;
+  text-align: center;
+  align-items: center;
+  display:block;
+  width:100%;
+  text-transform: uppercase;
+  color: #333;
+  font-size:0.75em;
+}
+
+#product-show-shopnow img{
+  max-height: 425px;
+  max-width: 425px;
 }
 
 #product-content {

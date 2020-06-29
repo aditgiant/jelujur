@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Welcome from './Welcome';
 import About from './About';
+import ShopNow from './ShopNow';
 import Lookbook from './Lookbook';
 import Product from './product';
 import Display from './Display';
-import Sidebar from './Sidebar';
 import Admin from './admin/Admin';
 import AdminEdit from './admin/Edit';
 import AdminCreate from './admin/AdminCreate';
@@ -22,11 +22,11 @@ class App extends Component {
     <div>
     <Welcome/>
     <Router onUpdate={() => window.scrollTo(0, 0)} history={createBrowserHistory()}>
-      <Sidebar/>
       <Switch>
       <Route path='/' exact component={Display}/>
-      <Route path='/aboutus' exact component={About}/>
-      <Route path='/collections' component={Lookbook}/>
+      <Route path='/aboutus' component={About}/>
+      <Route path='/shopnow/:filterID' component={ShopNow}/>
+      <Route path='/collections/ss2020' component={Lookbook}/>
       <Route path='/product/:id' component={Product}/>
       <Route path='/admin' component={Admin}/>
       <Route path='/adminedit/:id' component={AdminEdit} />

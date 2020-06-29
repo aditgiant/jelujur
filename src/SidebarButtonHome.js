@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import Menu from './imgsrc/hamburger.png'
-import CloseMenu from './imgsrc/close.png'
+import Menu from './imgsrc/hamburger_white.png'
+import CloseMenu from './imgsrc/close_white.png'
  
-class SidebarButton extends Component {
+class SidebarButtonHome extends Component {
   render() {
     var visibilitybutton = "hide";
       if (this.props.visible) {
@@ -19,4 +19,4 @@ class SidebarButton extends Component {
   }
 }
  
-export default SidebarButton;
+export default SidebarButtonHome;

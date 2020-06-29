@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
-import Display from './Display';
-import {Link} from 'react-router-dom';
+import SidebarHome from './SidebarHome';
 import Fade from 'react-reveal/Fade';
 import Roll from 'react-reveal/Roll'
 import makeCarousel from 'react-reveal/makeCarousel';
@@ -29,6 +28,7 @@ export default class Home extends Component {
     render() {
     return (
         <div>
+        <SidebarHome/>
         <section id="home">
             <div className="home">
             <Container>
@@ -47,7 +47,7 @@ export default class Home extends Component {
                     <h3 className="page-subtitle"><strong>SS20 COLLECTIONS</strong></h3>
                 </Fade>
                 <Fade top>
-                    <h3 className="page-subtitle"><strong>FIND OUT MORE</strong></h3>
+                    <h3 className="page-subtitle"><strong>FLORAL</strong></h3>
                 </Fade>
                 {/* <Fade top>
                     <h3 className="page-subtitle">for you.</h3>

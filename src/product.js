@@ -5,6 +5,7 @@ import Collapse from 'react-bootstrap/Collapse'
 import NumberFormat from 'react-number-format';
 import fire from './admin/Fire';
 import { Link } from 'react-router-dom';
+import Sidebar from './Sidebar';
 import Header from './header';
 import Footer from './footer';
 import OrderForm from './orderform';
@@ -79,10 +80,11 @@ class Product extends Component {
     }
     return (
         <div>
+        <Sidebar/>
         <Header/>
         <Container id="product-content">
         <Row><Col sm='2' id="back-to-catalog">
-            <Link to="/collections"><h3> &lt;</h3><p>&nbsp;Back to Collections</p></Link>
+            <Link to="/collections/ss2020"><h3> &lt;</h3><p>&nbsp;Back to Collections</p></Link>
         </Col>
         <Col sm='5' id="product-thumbnail">
           <div className="thumbnails">

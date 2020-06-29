@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import {Container, Row, Col} from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import Header from './header.js';
+import Sidebar from './Sidebar';
 import LogoGold from './imgsrc/Jelujur_logo_gold.png'
 
  
@@ -9,6 +10,7 @@ class About extends Component {
   render() {
     return (
     <div>
+    <Sidebar/>
     <Header/>
         <div id="aboutus-background">
             <Container>
