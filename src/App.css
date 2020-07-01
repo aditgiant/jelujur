@@ -177,7 +177,9 @@ body{
 
 .display {
   position: relative;
-  background-color: #CEC5C0;
+  background-image: url(./imgsrc/BGWeb.png);
+  background-position: center;
+  background-size:cover;
   height: 100vh;
   width:100%;
   top:0;
@@ -186,16 +188,76 @@ body{
   padding-top:100px;
 }
 
-.display-cabinet {
-  text-align: right;
+.display-title {
+  position: absolute;
+  left:0;
+  margin-left:5vw;
+  max-width: 20vw;
+  background-size:100% 100%;
+  display:inline-block;
+}
+
+.display-title-text {
+  text-align: center;
+  align-items: center;
+  width:75%;
+  top:0;
+  left:12.5%;
+  margin-top:67.5%;
+  position:absolute;
+}
+
+.display-title-text h4 {
+  display:inline-block;
+  font-family: 'Manrope', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: #C39187;
+  font-size: 2em;
+  cursor: default;
+}
+
+#back-arrow{
+  font-family: 'Manrope', sans-serif;
+  transition: transform 150ms ease-in-out;
+  position: absolute;
+  top:0;
+  right:0;
+  margin-right:87.5%;
+  margin-top:67.5%;
+  cursor: pointer;
+}
+
+#back-arrow:hover {
+  transform:scale(1.2);
+  color:#C59A39;
+}
+
+.display-holder > form{
+  text-align: center;
+  align-items: center;
+  position:relative;
+  height:100%;
 }
 
 .display-holder{
-  right:0;
+  bottom:15vh;
+  left:50%;
+  margin-left:-20vw;
+  background-image: url(./imgsrc/Hanger.png);
+  background-size:100% 100%;
+  background-repeat:no-repeat;
   text-align:right;
-  /* margin-bottom: 50px; */
-  width: 100%;
+  width:40vw;
+  height:65vh;
   position:absolute;
+  display:inline-block
+}
+
+.input-hidden {
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 img {
@@ -203,92 +265,72 @@ img {
   max-height: 100%;
 }
 
+#product-categorized {
+  position:relative;
+  top:0;
+  max-width:100%;
+}
 
-img.product1 {
+.display-items{
+  display:inline-block;
+  text-align:center;
+  align-items:center;
+  vertical-align: text-top;
+  margin-top:0;
+  padding-top:0;
+  height:100%;
+  max-width: 30%;
+}
+
+.display-items-6{
+  top:0;
+  left:0;
+  position: relative;
+  display:inline-block;
+  text-align:center;
+  align-items:center;
+  vertical-align: text-top;
+  margin-top:0;
+  padding-top:0;
+  height:100%;
+  max-width: 15%;
+}
+
+#product-categorized-6 {
+  position:relative;
+  top:0;
+  max-width:200%;
+}
+
+.product {
   animation-name: enddisplay;
   animation-duration: 750ms;
   position:absolute;
-  max-height: 40%;
-  top:75px;
-  left:275px;
-  /* transition: 250ms ease-in-out; */
-  z-index:5;
+  max-width: 30%;
+  top:0px;
+  left:0px;
+  cursor: pointer;
 }
 
-img.product1:hover {
-  /* transform: rotate(-10deg) translate(20px,-5px); */
-  animation-name: startdisplay;
-  animation-duration: 500ms;
-  animation-fill-mode: forwards
-}
-
-img.product2 {
-  animation-name: enddisplay;
-  animation-duration: 750ms;
-  position:absolute;
-  max-height: 35%;
-  top:70px;
-  left:360px;
-  /* transition: 250ms ease-in-out; */
-  z-index:4;
-}
-
-img.product2:hover {
-  /* transform: rotate(-10deg) translate(20px,-5px); */
-  animation-name: startdisplay;
-  animation-duration: 500ms;
-  animation-fill-mode: forwards
-}
-
-img.product3 {
-  animation-name: enddisplay;
-  animation-duration: 750ms;
-  position:absolute;
-  max-height: 40%;
-  top:75px;
-  left:425px;
-  /* transition: 250ms ease-in-out; */
-  z-index:3;
-}
-
-img.product3:hover {
-  /* transform: rotate(-10deg) translate(20px,-5px); */
-  animation-name: startdisplay;
-  animation-duration: 500ms;
-  animation-fill-mode: forwards
-}
-
-img.product4 {
-  animation-name: enddisplay;
-  animation-duration: 750ms;
-  position:absolute;
-  max-height: 28%;
-  top:70px;
-  left:525px;
-  /* transition: 250ms ease-in-out; */
-  z-index:2;
-}
-
-img.product4:hover {
-  /* transform: rotate(-10deg) translate(20px,-5px); */
+.product:hover {
   animation-name: startdisplay;
   animation-duration: 500ms;
   animation-fill-mode: forwards
 }
 
 @keyframes startdisplay{
-    to  {transform: rotate(-10deg) translate(20px,0px)};
+    to  {transform: rotate(10deg) translate(-25px,0px)};
 }
 
 @keyframes enddisplay{
   0%{
-    transform: rotate(-10deg) translate(20px,0px)
+    transform: rotate(-10deg) translate(25px,0px)
   }
   50%{
-    transform: rotate(10deg) translate(-20px,0px);
+    transform: rotate(10deg) translate(-25px,0px);
   }
   75%{
-    transform: rotate(-5deg) translate(10px,0px);
+    transform: rotate(-5deg) translate(12px,0px);
   }
   100%{
     transform: rotate(0deg) translate(0px,0px);
@@ -336,7 +378,7 @@ img.product4:hover {
 #flyoutMenu {
   width: 30vw;
   height: 100vh;
-  background-color: #feeae1;
+  background-color: #feeae1e7;
   position: fixed;
   top: 0;
   left: 0;

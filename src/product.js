@@ -84,7 +84,7 @@ class Product extends Component {
         <Header/>
         <Container id="product-content">
         <Row><Col sm='2' id="back-to-catalog">
-            <Link to="/collections/ss2020"><h3> &lt;</h3><p>&nbsp;Back to Collections</p></Link>
+            <Link to="/collections/ss2020"><h3> &lt;</h3><p>&nbsp;SS20-Floral</p></Link>
         </Col>
         <Col sm='5' id="product-thumbnail">
           <div className="thumbnails">

@@ -113,8 +113,8 @@ class SidebarHome extends Component {
             {(shopnowexpand==="expanded") && <div id="flyoutMenu-page">
               <Link style={{ textDecoration: 'none' }} onClick={this.handleMouseDownShopNow}><div className="flyoutMenu-item"><h3 id="flyoutBackArrow">&lt;&nbsp;</h3><h3>SHOP NOW</h3></div></Link>
               <Link style={{ textDecoration: 'none' }} to='/shopnow/top' onClick={this.handleMouseDownShopNow2}><div className="flyoutMenu-item"><h3>Top</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link>
-              <Link style={{ textDecoration: 'none' }} to='/shopnow/skirt' onClick={this.handleMouseDownShopNow2}><div className="flyoutMenu-item"><h3>Skirt</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link>
-              <Link style={{ textDecoration: 'none' }} to='/shopnow/trousers' onClick={this.handleMouseDownShopNow2}><div className="flyoutMenu-item"><h3>Trousers</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link>
+              {/* <Link style={{ textDecoration: 'none' }} to='/shopnow/skirt' onClick={this.handleMouseDownShopNow2}><div className="flyoutMenu-item"><h3>Skirt</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link>
+              <Link style={{ textDecoration: 'none' }} to='/shopnow/trousers' onClick={this.handleMouseDownShopNow2}><div className="flyoutMenu-item"><h3>Trousers</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link> */}
               <Link style={{ textDecoration: 'none' }} to='/shopnow/dress' onClick={this.handleMouseDownShopNow2}><div className="flyoutMenu-item"><h3>Dress</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link>
               <Link style={{ textDecoration: 'none' }} to='/shopnow/outer' onClick={this.handleMouseDownShopNow2}><div className="flyoutMenu-item"><h3>Outer</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link>
             </div>}

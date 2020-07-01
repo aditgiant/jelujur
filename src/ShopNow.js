@@ -65,8 +65,8 @@ class ShopNow extends Component {
         <Row>
             <Col id="shop-now-filter" sm={2}>
               <Link style={{ textDecoration: 'none' }} to='/shopnow/top'><div className="flyoutMenu-item"><h3>Top</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link>
-              <Link style={{ textDecoration: 'none' }} to='/shopnow/skirt'><div className="flyoutMenu-item"><h3>Skirt</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link>
-              <Link style={{ textDecoration: 'none' }} to='/shopnow/trousers'><div className="flyoutMenu-item"><h3>Trousers</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link>
+              {/* <Link style={{ textDecoration: 'none' }} to='/shopnow/skirt'><div className="flyoutMenu-item"><h3>Skirt</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link>
+              <Link style={{ textDecoration: 'none' }} to='/shopnow/trousers'><div className="flyoutMenu-item"><h3>Trousers</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link> */}
               <Link style={{ textDecoration: 'none' }} to='/shopnow/dress'><div className="flyoutMenu-item"><h3>Dress</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link>
               <Link style={{ textDecoration: 'none' }} to='/shopnow/outer'><div className="flyoutMenu-item"><h3>Outer</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link>
             </Col>

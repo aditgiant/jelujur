@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import {Container, Row, Col} from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import Header from './header.js';
+import Footer from './footer';
 import Sidebar from './Sidebar';
 import LogoGold from './imgsrc/Jelujur_logo_gold.png'
 
@@ -13,6 +14,7 @@ class About extends Component {
     <Sidebar/>
     <Header/>
         <div id="aboutus-background">
+        </div>
             <Container>
             <Col id="aboutus-content" sm="8">
                 <br/>
@@ -37,7 +39,7 @@ class About extends Component {
                 </Fade>
             </Col>
         </Container>
-        </div>
+    <Footer/>
     </div>
     );
   }
