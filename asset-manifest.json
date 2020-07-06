@@ -1,24 +1,25 @@
 {
   "files": {
-    "main.css": "/jelujur/static/css/main.1c1d0836.chunk.css",
-    "main.js": "/jelujur/static/js/main.5ee31f29.chunk.js",
-    "main.js.map": "/jelujur/static/js/main.5ee31f29.chunk.js.map",
+    "main.css": "/jelujur/static/css/main.fe280758.chunk.css",
+    "main.js": "/jelujur/static/js/main.1f93a88d.chunk.js",
+    "main.js.map": "/jelujur/static/js/main.1f93a88d.chunk.js.map",
     "runtime-main.js": "/jelujur/static/js/runtime-main.b8047482.js",
     "runtime-main.js.map": "/jelujur/static/js/runtime-main.b8047482.js.map",
     "static/css/2.69121389.chunk.css": "/jelujur/static/css/2.69121389.chunk.css",
-    "static/js/2.9ce2e66c.chunk.js": "/jelujur/static/js/2.9ce2e66c.chunk.js",
-    "static/js/2.9ce2e66c.chunk.js.map": "/jelujur/static/js/2.9ce2e66c.chunk.js.map",
+    "static/js/2.2e609477.chunk.js": "/jelujur/static/js/2.2e609477.chunk.js",
+    "static/js/2.2e609477.chunk.js.map": "/jelujur/static/js/2.2e609477.chunk.js.map",
     "index.html": "/jelujur/index.html",
-    "precache-manifest.d2bb1c5dac187195d820a7e2f4ce3924.js": "/jelujur/precache-manifest.d2bb1c5dac187195d820a7e2f4ce3924.js",
+    "precache-manifest.77d9e53c3bf81821ec86cd25d70a80f2.js": "/jelujur/precache-manifest.77d9e53c3bf81821ec86cd25d70a80f2.js",
     "service-worker.js": "/jelujur/service-worker.js",
     "static/css/2.69121389.chunk.css.map": "/jelujur/static/css/2.69121389.chunk.css.map",
-    "static/css/main.1c1d0836.chunk.css.map": "/jelujur/static/css/main.1c1d0836.chunk.css.map",
-    "static/js/2.9ce2e66c.chunk.js.LICENSE.txt": "/jelujur/static/js/2.9ce2e66c.chunk.js.LICENSE.txt",
+    "static/css/main.fe280758.chunk.css.map": "/jelujur/static/css/main.fe280758.chunk.css.map",
+    "static/js/2.2e609477.chunk.js.LICENSE.txt": "/jelujur/static/js/2.2e609477.chunk.js.LICENSE.txt",
     "static/media/App.css": "/jelujur/static/media/HomeWallpaper.8b0d71dc.jpg",
     "static/media/Jelujur_logoori.gif": "/jelujur/static/media/Jelujur_logoori.74d4035d.gif",
     "static/media/Jelujur_logospeedup.gif": "/jelujur/static/media/Jelujur_logospeedup.afaf5c37.gif",
     "static/media/Size_chart.jpeg": "/jelujur/static/media/Size_chart.9e6876d0.jpeg",
     "static/media/arrow.gif": "/jelujur/static/media/arrow.62dbc37e.gif",
+    "static/media/envelope.png": "/jelujur/static/media/envelope.1fbfd3c1.png",
     "static/media/featured_Dahlia Croptop.png": "/jelujur/static/media/featured_Dahlia Croptop.0cd3260c.png",
     "static/media/featured_Diascia Midi-dress.png": "/jelujur/static/media/featured_Diascia Midi-dress.8651fc76.png",
     "static/media/featured_Gaura Blazer.png": "/jelujur/static/media/featured_Gaura Blazer.06d04880.png",
@@ -28,8 +29,8 @@
   "entrypoints": [
     "static/js/runtime-main.b8047482.js",
     "static/css/2.69121389.chunk.css",
-    "static/js/2.9ce2e66c.chunk.js",
-    "static/css/main.1c1d0836.chunk.css",
-    "static/js/main.5ee31f29.chunk.js"
+    "static/js/2.2e609477.chunk.js",
+    "static/css/main.fe280758.chunk.css",
+    "static/js/main.1f93a88d.chunk.js"
   ]
 }
