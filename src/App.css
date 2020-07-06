@@ -104,6 +104,34 @@ body{
   max-height:300px;
 }
 
+.shopnow-sidebar {
+  cursor: pointer;
+  position:absolute;
+  right:5vw;
+  top:45vh;
+  height:10vh;
+  display:inline-block;
+  text-align: center;
+  align-items: center;
+  transition: transform 250ms ease-in-out;
+  opacity: 0.75;
+}
+
+.shopnow-sidebar:hover {
+ transform: scale(1.1);
+ opacity: 1; 
+}
+
+.shopnow-sidebar > img {
+  max-height:3vh;
+  margin:1vh;
+}
+
+.shopnow-sidebar > p {
+  font-size:0.75em;
+  color:#fff;
+}
+
 .discover {
   bottom:0;
   padding-bottom:25px;

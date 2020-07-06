@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
+import ShopNow from './imgsrc/iconShopNow.png'
 import SidebarHome from './SidebarHome';
 import Fade from 'react-reveal/Fade';
 import Roll from 'react-reveal/Roll'
@@ -7,6 +8,7 @@ import makeCarousel from 'react-reveal/makeCarousel';
 import Logo from './imgsrc/logo.png';
 import Arrow from './imgsrc/arrow.gif';
 import './App.css';
+import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 const CarouselDiv = styled.div`
     text-align: center;
@@ -57,6 +59,13 @@ export default class Home extends Component {
             </Row>
             </Roll>
             </Container>
+            <Link to="/shopnow/top">
+            <div className="shopnow-sidebar">
+                <img src={ShopNow}/>
+                
+                <p>SHOP NOW</p>
+            </div>
+            </Link>
             <div className="discover">
                 <a className="discover-hover" onClick={() => this.scrollToDisplay()}>
                 <h3 className="text-discover">DISCOVER <br/></h3>

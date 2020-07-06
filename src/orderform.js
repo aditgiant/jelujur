@@ -1,12 +1,14 @@
 import React, { Component } from "react";
+import * as emailjs from 'emailjs-com';
+import Envelop from './imgsrc/envelope.png';
  
 class OrderForm extends Component {
     state = {
             name: "",
             email: "",
+            subject: "",
             phone:"",
             message: "",
-            subject: "",
             submitted:false
         };
 
@@ -19,30 +21,40 @@ class OrderForm extends Component {
       }
       
     handleSubmit = (e) => {
-        e.preventDefault()
+        e.preventDefault();
+        const { product, name, email, subject, phone, message } = this.state
         console.log("Submitted!");
         this.showToast();
-        // const { name, email, subject, message } = this.state
-        // let templateParams = {
-        //   from_name: email,
-        //   to_name: '<YOUR_EMAIL_ID>',
-        //   subject: subject,
-        //   message_html: message,
-        //  }
-        //  emailjs.send(
-        //   'gmail',
-        //   'template_XXXXXXXX',
-        //    templateParams,
-        //   'user_XXXXXXXXXXXXXXXXXXXX'
-        //  )
-        //  this.resetForm()
+        let templateParams = {
+          subject: subject,
+          from_name: name,
+          email: email,
+          phone: phone,
+          message_html : message,
+         }
+         emailjs.send(
+          'gmail',
+          'template_tsHONrJb',
+           templateParams,
+          'user_1zsD14BrG6sKcPqJ1zreg'
+         )
     }
 
     showToast = (e) => {
-      const state = this.state
-      state["submitted"] = true;
-      this.setState(state);
+      this.setState(prevState => ({ 
+        submitted : true
+        }), () => console.log(this.state))
       this.props.handleOrderExpand();
+    }
+
+    newForm = (e) => {
+      this.setState({...this.state,
+        name: "",
+        email: "",
+        subject: this.props.product,
+        phone:"",
+        message: "",
+        submitted:false})
     }
 
   render() {
@@ -54,6 +66,11 @@ class OrderForm extends Component {
       <br/>
       {/* <h4>props :{this.props.product}</h4> */}
       <form id="order-formbody" className="container" onSubmit={this.handleSubmit}>
+      {this.state.submitted === true && (
+        <img src={Envelop} style={{'maxHeight':'20vh'}}/>
+      )}
+      {this.state.submitted === false && (
+            <>
             <div id="product-form" className="form-group row">
                 <label className="form-label col-sm-2">Product</label>
                 <div className="col-sm-10">
@@ -119,6 +136,7 @@ class OrderForm extends Component {
                     />
                 </div>
             </div>
+            </>)}
           <br/>
           <br/>
            {this.state.submitted === false &&
@@ -126,8 +144,13 @@ class OrderForm extends Component {
               <p>Submit order &nbsp;</p><h3>&gt;</h3>
            </div>}
            {this.state.submitted === true &&
-           <div id="form-order-submitted">
-              <p><strong>Thanks for your order!</strong></p>
+           <div>
+           <div id="form-order-submitted" style={{'display':'block','textAlign':'center', 'alignItems':'center'}}>
+              <p style={{'textAlign':'center'}}><strong>Thanks for your order!</strong><br/>
+              We're coming back to you as soon as we can :)</p>
+           </div><div id="form-order-submit" onClick={this.newForm}>
+              <p>Make a new order &nbsp;</p><h3>&gt;</h3>
+           </div>
            </div>}
       </form>        
     </div>
