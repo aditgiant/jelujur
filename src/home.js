@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
 import ShopNow from './imgsrc/iconShopNow.png'
+import SearchField from './SearchField';
 import SidebarHome from './SidebarHome';
 import Fade from 'react-reveal/Fade';
 import Roll from 'react-reveal/Roll'
@@ -59,12 +60,13 @@ export default class Home extends Component {
             </Row>
             </Roll>
             </Container>
+            <SearchField/>
             <Link to="/shopnow/top">
-            <div className="shopnow-sidebar">
-                <img src={ShopNow}/>
-                
-                <p>SHOP NOW</p>
-            </div>
+                <div className="shopnow-sidebar">
+                    <img src={ShopNow}/>
+                    
+                    <p>SHOP NOW</p>
+                </div>
             </Link>
             <div className="discover">
                 <a className="discover-hover" onClick={() => this.scrollToDisplay()}>
