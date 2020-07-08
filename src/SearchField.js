@@ -9,41 +9,32 @@ export default class SearchField extends Component {
         super(props);
         this.state = {
             keywords:'',
+            searchActive:false,
             boards: []
         }
         this.ref = fire.firestore().collection('Products')
         this.unsubscribe = null;
         this.handleChange = this.handleChange.bind(this);
-    }
-    
-    onCollectionUpdate = (querySnapshot) => {
-        const boards = [];
-        querySnapshot.forEach((doc) => {
-          const { title, image, category, price } = doc.data();
-          boards.push({
-            key: doc.id,
-            doc, // DocumentSnapshot
-            title,
-            image,
-            category,
-            price
-          });
-        });
-        this.setState({...this.state,
-          boards
-       });
-      }
-
-    componentDidMount() {
-        this.unsubscribe = this.ref.onSnapshot(this.onCollectionUpdate);
+        this.onInputFocused = this.onInputFocused.bind(this);
+        this.onCloseSearch = this.onCloseSearch.bind(this);
     }
 
     handleChange (e) {
         e.preventDefault();
         let value = e.target.value;
-        this.setState({...this.state,
-            keywords: value
-        }, () => console.log(this.state))
+            this.setState({...this.state,
+                keywords: value,
+            }, () => console.log(this.state))
+    }
+
+    onCloseSearch() {
+        this.setState({...this.state, 
+            searchActive : false})
+    }
+
+    onInputFocused() {
+        this.setState({...this.state, 
+            searchActive : true})
     }
 
     setCursorSearch () {
@@ -56,15 +47,22 @@ export default class SearchField extends Component {
             <input
             id="search-form"
             className="search-form"
+            onFocus={this.onInputFocused}
             type="string"
             value={this.state.keywords} 
             onChange={this.handleChange}
-            placeholder="Type product here"
+            placeholder="Search on Jelujur"
             />
              <p onClick={this.setCursorSearch}><Link style={{ color: '#fff', fontSize:'0.75em', textDecoration: 'none' }} to={`/`}>&nbsp; &nbsp;SEARCH</Link></p>
-            {this.state.keywords !== "" && <div className="search-results">
-                <p>Showing results for <strong>"{this.state.keywords}"</strong></p>
-                <SearchItems keywords={this.state.keywords}/>        
+            {this.state.searchActive &&
+            <div className="search-results">
+                <div className="search-header">
+                {this.state.keywords == '' && <p>Type a product name or category...</p>}
+                {this.state.keywords !== '' && <p>Showing results for <strong>"{this.state.keywords}"</strong></p>}
+                <p className="search-close" onClick={this.onCloseSearch}><strong>X</strong></p>
+                </div>
+                {this.state.keywords !== "" && 
+                <SearchItems onClick={this.setCursorSearch} keywords={this.state.keywords}/>}        
             </div>}
         </div>
         )

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import fire from './admin/Fire';
 import NumberFormat from 'react-number-format';
+import AsyncSelect from 'react-select/async';
 
 export default class SearchItems extends Component {
     constructor(props){
@@ -37,22 +38,27 @@ export default class SearchItems extends Component {
         this.unsubscribe = this.ref.onSnapshot(this.onCollectionUpdate);
     }
 
-    componentDidUpdate(prevProps) {
-        console.log('changed!')
+    componentDidUpdate = (prevProps) => {
+        console.log('changed!');
         if (this.props.keywords !== prevProps.keywords) {
-            this.updateKeywords();
+            this.setState({...this.state, 
+                keywords : this.props.keywords},() => {
+                    this.updateKeywords();
+                    console.log(this.state.keywords)});
         }
     }
 
-    async updateKeywords () {
-        this.unsubscribe = this.ref.where("category", "==", this.props.keywords).onSnapshot(this.onCollectionUpdate);
+    updateKeywords () {
+        console.log(this.state.keywords);
+        this.unsubscribe = this.ref.where("keywords", "array-contains", this.state.keywords).onSnapshot(this.onCollectionUpdate);
+
+        // this.unsubscribe = this.ref.orderBy('category').startAt(this.props.keywords)
+        //                             .endAt(this.props.keywords+"\uf8ff").onSnapshot(this.onCollectionUpdate);
     }
 
     render() {
-        console.log(this.state.keywords);
-        console.log(this.props.keywords);
         return (
-        <div id="searchresulsthere">
+        <div id="searchresultshere">
         {this.state.boards.map(board =>
                     <Link to={`/product/${board.key}`} style={{ color: '#000', fontSize:'0.75em', textDecoration: 'none' }}>
                         <div className="search-item">
