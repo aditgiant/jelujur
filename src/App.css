@@ -42,12 +42,23 @@ body{
   animation-fill-mode: forwards;
 }
 
+@media (max-width: 768px){
 .loading-gif {
-  width: 10vw;
+  width: 30vw;
   text-align:center;
   margin-top:35vh;
-  margin-left:45vw;
+  margin-left:35vw;
 }
+}
+
+@media (min-width: 769px){
+  .loading-gif {
+    width: 10vw;
+    text-align:center;
+    margin-top:35vh;
+    margin-left:45vw;
+  }
+  }
 
 @keyframes fadeout {
     from {opacity:1; visibility:visible}
@@ -770,11 +781,7 @@ img {
 
 #roundButton {
   position:fixed;
-  top:0;
-  left:0;
   background: transparent;
-  margin-top: 5px;
-  margin-left: 20px;
   width: 75px;
   height: 75px;
   border-color:transparent;
@@ -783,6 +790,20 @@ img {
               cubic-bezier(0, .52, 0, 1);
   z-index:250;
   outline: none;
+}
+
+@media (max-width: 480px){
+  #roundButton {
+    top:5px;
+    left:5px;
+  }
+}
+
+@media (min-width: 480px){
+  #roundButton {
+    top:5px;
+    left:20px;
+  }
 }
 
 @media (min-width: 480px){
