@@ -16,11 +16,10 @@ class About extends Component {
         <div id="aboutus-background"/>
         <div id="aboutus-content">
                 <div>
-                <br/><br/><br/><br/><br/>
+                <br/><br/><br/><br/>
                 <Fade left>
                 <h4><strong>ABOUT US</strong></h4>
                 </Fade>
-                <br/>
                 <br/>
                 <br/>
                 <Fade right>
