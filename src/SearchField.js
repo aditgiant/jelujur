@@ -21,7 +21,7 @@ export default class SearchField extends Component {
 
     handleChange (e) {
         e.preventDefault();
-        let value = e.target.value;
+        let value = e.target.value.toLowerCase();
             this.setState({...this.state,
                 keywords: value,
             }, () => console.log(this.state))
