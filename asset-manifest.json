@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/jelujur/static/css/main.b2c8363b.chunk.css",
-    "main.js": "/jelujur/static/js/main.2233ee78.chunk.js",
-    "main.js.map": "/jelujur/static/js/main.2233ee78.chunk.js.map",
+    "main.css": "/jelujur/static/css/main.e93c2101.chunk.css",
+    "main.js": "/jelujur/static/js/main.6c1a0cfd.chunk.js",
+    "main.js.map": "/jelujur/static/js/main.6c1a0cfd.chunk.js.map",
     "runtime-main.js": "/jelujur/static/js/runtime-main.b8047482.js",
     "runtime-main.js.map": "/jelujur/static/js/runtime-main.b8047482.js.map",
     "static/css/2.69121389.chunk.css": "/jelujur/static/css/2.69121389.chunk.css",
-    "static/js/2.36f4903a.chunk.js": "/jelujur/static/js/2.36f4903a.chunk.js",
-    "static/js/2.36f4903a.chunk.js.map": "/jelujur/static/js/2.36f4903a.chunk.js.map",
+    "static/js/2.93b5d601.chunk.js": "/jelujur/static/js/2.93b5d601.chunk.js",
+    "static/js/2.93b5d601.chunk.js.map": "/jelujur/static/js/2.93b5d601.chunk.js.map",
     "index.html": "/jelujur/index.html",
-    "precache-manifest.b99aae6fea4446388d8cf01504f1bd45.js": "/jelujur/precache-manifest.b99aae6fea4446388d8cf01504f1bd45.js",
+    "precache-manifest.a74382c4e14de9b3ba8b6fc176fbd9f6.js": "/jelujur/precache-manifest.a74382c4e14de9b3ba8b6fc176fbd9f6.js",
     "service-worker.js": "/jelujur/service-worker.js",
     "static/css/2.69121389.chunk.css.map": "/jelujur/static/css/2.69121389.chunk.css.map",
-    "static/css/main.b2c8363b.chunk.css.map": "/jelujur/static/css/main.b2c8363b.chunk.css.map",
-    "static/js/2.36f4903a.chunk.js.LICENSE.txt": "/jelujur/static/js/2.36f4903a.chunk.js.LICENSE.txt",
+    "static/css/main.e93c2101.chunk.css.map": "/jelujur/static/css/main.e93c2101.chunk.css.map",
+    "static/js/2.93b5d601.chunk.js.LICENSE.txt": "/jelujur/static/js/2.93b5d601.chunk.js.LICENSE.txt",
     "static/media/App.css": "/jelujur/static/media/HomeWallpaper.8b0d71dc.jpg",
     "static/media/Jelujur_logoori.gif": "/jelujur/static/media/Jelujur_logoori.74d4035d.gif",
     "static/media/Jelujur_logospeedup.gif": "/jelujur/static/media/Jelujur_logospeedup.afaf5c37.gif",
@@ -29,8 +29,8 @@
   "entrypoints": [
     "static/js/runtime-main.b8047482.js",
     "static/css/2.69121389.chunk.css",
-    "static/js/2.36f4903a.chunk.js",
-    "static/css/main.b2c8363b.chunk.css",
-    "static/js/main.2233ee78.chunk.js"
+    "static/js/2.93b5d601.chunk.js",
+    "static/css/main.e93c2101.chunk.css",
+    "static/js/main.6c1a0cfd.chunk.js"
   ]
 }
