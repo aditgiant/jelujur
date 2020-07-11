@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/jelujur/static/css/main.e93c2101.chunk.css",
-    "main.js": "/jelujur/static/js/main.6c1a0cfd.chunk.js",
-    "main.js.map": "/jelujur/static/js/main.6c1a0cfd.chunk.js.map",
+    "main.js": "/jelujur/static/js/main.72c53d69.chunk.js",
+    "main.js.map": "/jelujur/static/js/main.72c53d69.chunk.js.map",
     "runtime-main.js": "/jelujur/static/js/runtime-main.b8047482.js",
     "runtime-main.js.map": "/jelujur/static/js/runtime-main.b8047482.js.map",
     "static/css/2.69121389.chunk.css": "/jelujur/static/css/2.69121389.chunk.css",
     "static/js/2.93b5d601.chunk.js": "/jelujur/static/js/2.93b5d601.chunk.js",
     "static/js/2.93b5d601.chunk.js.map": "/jelujur/static/js/2.93b5d601.chunk.js.map",
     "index.html": "/jelujur/index.html",
-    "precache-manifest.a74382c4e14de9b3ba8b6fc176fbd9f6.js": "/jelujur/precache-manifest.a74382c4e14de9b3ba8b6fc176fbd9f6.js",
+    "precache-manifest.385ec890e9de475d3d1643f649efba54.js": "/jelujur/precache-manifest.385ec890e9de475d3d1643f649efba54.js",
     "service-worker.js": "/jelujur/service-worker.js",
     "static/css/2.69121389.chunk.css.map": "/jelujur/static/css/2.69121389.chunk.css.map",
     "static/css/main.e93c2101.chunk.css.map": "/jelujur/static/css/main.e93c2101.chunk.css.map",
@@ -31,6 +31,6 @@
     "static/css/2.69121389.chunk.css",
     "static/js/2.93b5d601.chunk.js",
     "static/css/main.e93c2101.chunk.css",
-    "static/js/main.6c1a0cfd.chunk.js"
+    "static/js/main.72c53d69.chunk.js"
   ]
 }
