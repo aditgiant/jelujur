@@ -20,18 +20,18 @@ class Footer extends Component {
         <Container id="footer-link">
         <Row>
             <Col>
-                <a href=""><p>Instagram</p></a>
-            </Col>
-            <Col>
-                <a href=""><p>Contact Us</p></a>
-            </Col>
-            <Col>
-                <a href=""><p>YouTube</p></a>
+                <a><p>Contact Us</p></a>
             </Col>
         </Row>
         <Row>
             <Col>
-                <a href=""><p>jelujurlabel@gmail.com</p></a>
+                <a href="https://instagram.com/jelujurlabel" target="_blank"><p>Instagram</p></a>
+            </Col>
+            <Col>
+                <a href="mailto:jelujurlabel@gmail.com"><p>jelujurlabel@gmail.com</p></a>
+            </Col>
+            <Col>
+                <a href=""><p>YouTube</p></a>
             </Col>
         </Row>
         </Container>

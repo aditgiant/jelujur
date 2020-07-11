@@ -31,37 +31,38 @@ export default class Home extends Component {
     render() {
     return (
         <div>
-        <SidebarHome/>
         <section id="home">
             <div className="home">
-            <Container>
-            <Roll right>
-            <Row>
-            <Col className="page-title">
-            <div className="page-title">
-                <img className="logo" src={Logo} alt='Jelujur'/>
+                <SidebarHome/>
+               <div className="page-title">
+                    <div style={{'text-align':'center'}}>
+                    <Fade>
+                    <img className="logo" src={Logo} alt='Jelujur'/>
+                    </Fade>
+                    <br/><br/><br/>
+                    <Link to="/collections/ss2020" style={{'textDecoration':'none'}}>
+                        <Fade left>
+                        <h1><strong>FLORAL</strong></h1>
+                        </Fade>
+                        <Fade right>
+                        <h5>SS20 COLLECTIONS</h5>
+                        </Fade>
+                    </Link>
+                    </div>
+                    {/* 
+                    <Fade top>
+                        <h3 className="page-subtitle"><strong>SS20 COLLECTIONS</strong></h3>
+                    </Fade>
+                    <Fade top>
+                        <h3 className="page-subtitle"><strong>FLORAL</strong></h3>
+                    </Fade>
+                    <Fade top>
+                        <h3 className="page-subtitle">for you.</h3>
+                    </Fade>
+                </Carousel> */}
             </div>
-            </Col>
-            </Row>
-            <Row>
-            <Col className="center-subtitle page-subtitle">
-            <Carousel defaultWait={3000} /*wait for 1000 milliseconds*/ >
-                <Fade top>
-                    <h3 className="page-subtitle"><strong>SS20 COLLECTIONS</strong></h3>
-                </Fade>
-                <Fade top>
-                    <h3 className="page-subtitle"><strong>FLORAL</strong></h3>
-                </Fade>
-                {/* <Fade top>
-                    <h3 className="page-subtitle">for you.</h3>
-                </Fade> */}
-            </Carousel>
-            </Col>
-            </Row>
-            </Roll>
-            </Container>
             <SearchField/>
-            <Link to="/shopnow/top">
+            <Link to="/shopnow/all">
                 <div className="shopnow-sidebar">
                     <img src={ShopNow}/>
                     
@@ -70,7 +71,7 @@ export default class Home extends Component {
             </Link>
             <div className="discover">
                 <a className="discover-hover" onClick={() => this.scrollToDisplay()}>
-                <h3 className="text-discover">DISCOVER <br/></h3>
+                <h3 className="text-discover"><strong>DISCOVER</strong><br/></h3>
                 <div className="arrow-holder">
                     <img className="arrow" src={Arrow} alt='Discover'/>
                 </div>

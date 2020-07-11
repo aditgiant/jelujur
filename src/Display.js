@@ -1,7 +1,9 @@
 import React, { Component, useRef, useState, useEffect } from 'react';
 import {Link} from 'react-router-dom';
 import Home from './home';
+import Header from './header';
 import Footer from './footer';
+import Sidebar from './Sidebar';
 import fire from './admin/Fire';
 import {Container, Row, Col} from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
@@ -10,6 +12,7 @@ import featuredTop from './imgsrc/featured_Dahlia Croptop.png';
 import featuredOuter from './imgsrc/featured_Gaura Blazer.png';
 import Rack from './imgsrc/featured_Racktitile.png'
 import './App.css';
+import SearchFieldHeader from './SearchFieldHeader';
 
 // function useHover1(){
 //     const ref1 = useRef();
@@ -87,6 +90,14 @@ class Display extends Component {
     return (
             <>
             <Home/>
+            <div id="header-display">
+                
+                <Sidebar/>
+                <Header/>
+                <SearchFieldHeader/>
+                
+            </div>
+            <Fade>
             <section id="display">
                 <div className="display">
                         <div className="display-title">
@@ -132,8 +143,9 @@ class Display extends Component {
                             </div>}
                         </div>
                 </div>
-                <Footer/>
             </section>
+            </Fade>
+            <Footer/>
             </>
     );
 }}

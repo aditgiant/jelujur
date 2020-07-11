@@ -13,11 +13,10 @@ class About extends Component {
     <div>
     <Sidebar/>
     <Header/>
-        <div id="aboutus-background">
-        </div>
-            <Container>
-            <Col id="aboutus-content" sm="8">
-                <br/>
+        <div id="aboutus-background"/>
+        <div id="aboutus-content">
+                <div>
+                <br/><br/><br/><br/><br/>
                 <Fade left>
                 <h4><strong>ABOUT US</strong></h4>
                 </Fade>
@@ -37,8 +36,8 @@ class About extends Component {
                 able to compete with International brands.
                 </p>
                 </Fade>
-            </Col>
-        </Container>
+                </div>
+        </div>
     <Footer/>
     </div>
     );

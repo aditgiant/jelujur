@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {Link} from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
 import LogoGold from './imgsrc/Jelujur_logo_gold.png'
  
@@ -12,7 +13,9 @@ class Header extends Component {
     return (
     <Fade>
         <div id="header">
-        <img src={LogoGold} onClick={() => this.scrollToTop()}/>
+        <Link to="/">
+        <img src={LogoGold}/>
+        </Link>
         </div>
     </Fade>
     );

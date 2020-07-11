@@ -111,16 +111,17 @@ class Sidebar extends Component {
               <div className="flyoutMenu-item"><h3 onClick={() => this.scrollToBottom()}>CONTACT US</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div>
             </div>}
             {(shopnowexpand==="expanded") && <div id="flyoutMenu-page">
-              <Link style={{ textDecoration: 'none' }} onClick={this.handleMouseDownShopNow}><div className="flyoutMenu-item"><h3 id="flyoutBackArrow">&lt;&nbsp;</h3><h3>SHOP NOW</h3></div></Link>
-              <Link style={{ textDecoration: 'none' }} to='/shopnow/top' onClick={this.handleMouseDownShopNow2}><div className="flyoutMenu-item"><h3>Top</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link>
-              {/* <Link style={{ textDecoration: 'none' }} to='/shopnow/skirt' onClick={this.handleMouseDownShopNow2}><div className="flyoutMenu-item"><h3>Skirt</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link>
-              <Link style={{ textDecoration: 'none' }} to='/shopnow/trousers' onClick={this.handleMouseDownShopNow2}><div className="flyoutMenu-item"><h3>Trousers</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link> */}
-              <Link style={{ textDecoration: 'none' }} to='/shopnow/dress' onClick={this.handleMouseDownShopNow2}><div className="flyoutMenu-item"><h3>Dress</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link>
-              <Link style={{ textDecoration: 'none' }} to='/shopnow/outer' onClick={this.handleMouseDownShopNow2}><div className="flyoutMenu-item"><h3>Outer</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link>
+            <Link style={{ textDecoration: 'none' }} onClick={this.handleMouseDownShopNow}><div className="flyoutMenu-item"><h3 id="flyoutBackArrow">&lt;&nbsp;</h3><h3>SHOP NOW</h3></div></Link>
+              <Link style={{ textDecoration: 'none' }} to='/shopnow/top' onClick={this.handleMouseDownShopNow2}><div className="flyoutMenu-item subflyoutMenu"><h3>Top</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link>
+              <Link style={{ textDecoration: 'none' }} to='/shopnow/dress' onClick={this.handleMouseDownShopNow2}><div className="flyoutMenu-item subflyoutMenu"><h3>Dress</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link>
+              <Link style={{ textDecoration: 'none' }} to='/shopnow/skirt' onClick={this.handleMouseDownShopNow2}><div className="flyoutMenu-item subflyoutMenu"><h3>Skirt</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link>
+              <Link style={{ textDecoration: 'none' }} to='/shopnow/trousers' onClick={this.handleMouseDownShopNow2}><div className="flyoutMenu-item subflyoutMenu"><h3>Trousers</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link>
+              <Link style={{ textDecoration: 'none' }} to='/shopnow/outer' onClick={this.handleMouseDownShopNow2}><div className="flyoutMenu-item subflyoutMenu"><h3>Outer</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link>
+              <Link style={{ textDecoration: 'none' }} to='/shopnow/all' onClick={this.handleMouseDownShopNow2}><div className="flyoutMenu-item subflyoutMenu"><h3>All</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link>
             </div>}
             {(collectionsexpand==="expanded") && <div id="flyoutMenu-page">
               <Link style={{ textDecoration: 'none' }} onClick={this.handleMouseDownCollections}><div className="flyoutMenu-item"><h3 id="flyoutBackArrow">&lt;&nbsp;</h3><h3>COLLECTIONS</h3></div></Link>
-              <Link style={{ textDecoration: 'none' }} to='/collections/ss2020' onClick={this.handleMouseDownCollections2}><div className="flyoutMenu-item"><h3>Spring-Summer '20 Floral</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link>
+              <Link style={{ textDecoration: 'none' }} to='/collections/ss2020' onClick={this.handleMouseDownCollections2}><div className="flyoutMenu-item subflyoutMenu"><h3>Spring-Summer '20 Floral</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link>
             </div>}
       </div>
       </div>

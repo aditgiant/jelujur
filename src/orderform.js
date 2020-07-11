@@ -9,21 +9,30 @@ class OrderForm extends Component {
             subject: "",
             phone:"",
             message: "",
+            empty:"",
             submitted:false
         };
 
     onChange = (e) => {
         const state = this.state
+        if (e.target.value == "") {
+          state["empty"] = "All fields cannot be empty."
+          state[e.target.name] = e.target.value;
+          state["subject"] = this.props.product;
+          this.setState(state);  
+        } else {
+        state["empty"] = "";
         state[e.target.name] = e.target.value;
         state["subject"] = this.props.product;
-        this.setState(state);
+        this.setState(state)};
         console.log(this.state);
       }
       
     handleSubmit = (e) => {
         e.preventDefault();
         const { product, name, email, subject, phone, message } = this.state
-        console.log("Submitted!");
+        if ((name !== "") && (email !== "") && (subject !== "") && (phone !== "") && (message !== "")) {
+          console.log("Submitted!");
         this.showToast();
         let templateParams = {
           subject: subject,
@@ -38,6 +47,13 @@ class OrderForm extends Component {
            templateParams,
           'user_1zsD14BrG6sKcPqJ1zreg'
          )
+        } else {
+          const state = this.state;
+          state["empty"] = "Fill all fields before submitting."
+          state["subject"] = this.props.product;
+          this.setState(state);  
+        }
+        
     }
 
     showToast = (e) => {
@@ -71,9 +87,10 @@ class OrderForm extends Component {
       )}
       {this.state.submitted === false && (
             <>
+            {this.state.empty !== "" && <p style={{'textTransform':"uppercase", 'textAlign':'center', 'color':'red'}}>{this.state.empty}</p>}
             <div id="product-form" className="form-group row">
-                <label className="form-label col-sm-2">Product</label>
-                <div className="col-sm-10">
+                <label className="form-label col-md-2">Product*</label>
+                <div className="col-md-10">
                   <input
                     className="form-control"
                     type="string"
@@ -84,7 +101,7 @@ class OrderForm extends Component {
                 </div>
             </div>
             <div id="product-form" className="form-group row">
-                <label className="form-label col-sm-2">Name</label>
+                <label className="form-label col-sm-2">Name*</label>
                 <div className="col-sm-10">
                   <input
                     className="form-control"
@@ -92,38 +109,38 @@ class OrderForm extends Component {
                     name="name"
                     value={this.state.name}
                     onChange={this.onChange}
-                    placeholder="Your name"
+                    placeholder="your name"
                     />
                 </div>
             </div>
             <div id="product-form" className="form-group row">
-                <label className="form-label col-sm-2">Phone</label>
+                <label className="form-label col-sm-2">Phone*</label>
                 <div className="col-sm-10">
                   <input
                     className="form-control"
                     type="number"
                     name="phone"
-                    placeholder="Your phone number"
+                    placeholder="only fill with numbers"
                     value={this.state.phone}
                     onChange={this.onChange}
                     />
                 </div>
             </div>
             <div id="product-form" className="form-group row">
-                <label className="form-label col-sm-2">Email</label>
+                <label className="form-label col-sm-2">Email*</label>
                 <div className="col-sm-10">
                   <input
                     className="form-control"
                     type="email"
                     name="email"
-                    placeholder="Your email"
+                    placeholder="name@email.com"
                     value={this.state.email}
                     onChange={this.onChange}
                     />
                 </div>
             </div>
             <div id="product-form" className="form-group row">
-                <label className="form-label col-sm-2">Message</label>
+                <label className="form-label col-sm-2">Message*</label>
                 <div className="col-sm-10">
                   <textarea
                     id = "order-form-message"

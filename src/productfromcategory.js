@@ -84,7 +84,7 @@ class ProductFromCategory extends Component {
         <Header/>
         <Container id="product-content">
         <Row><Col sm='2' id="back-to-catalog">
-            <Link to={`/shopnow/${this.state.board.category}`}><h3> &lt;</h3><p>&nbsp;{this.state.board.category}</p></Link>
+            <Link to={`/shopnow/${this.state.board.category}`}><h3> &lt;</h3><p>&nbsp;Shop Now</p></Link>
         </Col>
         <Col sm='5' id="product-thumbnail">
           <div className="thumbnails">
@@ -92,7 +92,7 @@ class ProductFromCategory extends Component {
             {this.state.board.moreImage !== '' && <img id="second-thumbnail" className={imageActive} src={this.state.board.moreImage}/>}
           </div>
         </Col>
-        <Col sm='1' id="product-thumbnail">
+        <Col sm='1' id="navigation-thumbnail-box">
         {this.state.board.moreImage !== '' && <div id="navigation-thumbnail" className={imageActive} onClick={this.handleMouseDown}><h1>&gt;</h1></div>}
         </Col>
         <Col sm='4' id="product-description">
@@ -168,13 +168,14 @@ class ProductFromCategory extends Component {
             <div className={"toggle toggle-"+this.state.orderExpand} onClick = {this.handleOrderExpand}>
               <strong><h3>&gt;</h3>
               <p>&nbsp;HOW TO ORDER</p></strong>
-            </div>
-            <div className="orderpopup" id={"orderpopup-"+this.state.orderExpand}>
+              </div>
+              <div className="orderpopup" id={"orderpopup-"+this.state.orderExpand}>
                 <OrderForm handleOrderExpand={this.handleOrderExpand}
                            orderExpand={this.state.orderExpand}
                            product={this.state.board.title}
                            />
             </div>
+            
         </Col>
         </Row>
         </Container>

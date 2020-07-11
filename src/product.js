@@ -92,7 +92,7 @@ class Product extends Component {
             {this.state.board.moreImage !== '' && <img id="second-thumbnail" className={imageActive} src={this.state.board.moreImage}/>}
           </div>
         </Col>
-        <Col sm='1' id="product-thumbnail">
+        <Col sm='1' id="navigation-thumbnail-box">
         {this.state.board.moreImage !== '' && <div id="navigation-thumbnail" className={imageActive} onClick={this.handleMouseDown}><h1>&gt;</h1></div>}
         </Col>
         <Col sm='4' id="product-description">

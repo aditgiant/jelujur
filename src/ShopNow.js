@@ -63,24 +63,42 @@ class ShopNow extends Component {
         <Header/>
         <Container id="catalog-content">
         <Row>
-            <Col id="shop-now-filter" sm={2}>
-              <Link style={{ textDecoration: 'none' }} to='/shopnow/top'><div className="flyoutMenu-item"><h3>Top</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link>
-              {/* <Link style={{ textDecoration: 'none' }} to='/shopnow/skirt'><div className="flyoutMenu-item"><h3>Skirt</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link>
-              <Link style={{ textDecoration: 'none' }} to='/shopnow/trousers'><div className="flyoutMenu-item"><h3>Trousers</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link> */}
-              <Link style={{ textDecoration: 'none' }} to='/shopnow/dress'><div className="flyoutMenu-item"><h3>Dress</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link>
-              <Link style={{ textDecoration: 'none' }} to='/shopnow/outer'><div className="flyoutMenu-item"><h3>Outer</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link>
+            <Col id="shop-now-filter" md={4} lg={2}>
+              <Link style={{ textDecoration: 'none' }} to='/shopnow/top'><div className="shopNow-item"><h3>Top</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link>
+              {/* <Link style={{ textDecoration: 'none' }} to='/shopnow/skirt'><div className="shopNow-item"><h3>Skirt</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link>
+              <Link style={{ textDecoration: 'none' }} to='/shopnow/trousers'><div className="shopNow-item"><h3>Trousers</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link> */}
+              <Link style={{ textDecoration: 'none' }} to='/shopnow/dress'><div className="shopNow-item"><h3>Dress</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link>
+              <Link style={{ textDecoration: 'none' }} to='/shopnow/skirt'><div className="shopNow-item"><h3>Skirt</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link>
+              <Link style={{ textDecoration: 'none' }} to='/shopnow/trousers'><div className="shopNow-item"><h3>Trousers</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link>
+              <Link style={{ textDecoration: 'none' }} to='/shopnow/outer'><div className="shopNow-item"><h3>Outer</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link>
+              <Link style={{ textDecoration: 'none' }} to='/shopnow/all'><div className="shopNow-item"><h3>All</h3><h3 id="flyoutArrow">&gt;&nbsp;</h3></div></Link>
             </Col>
-            <Col id="shop-now-show" sm={10}>
-                <p>Showing items for '{this.state.filterID}' category</p>
-                {this.state.boards.map(board => board.category === this.state.filterID ?
+            <Col id="shop-now-show" md={8} lg={10}>
+                {((this.state.filterID != 'skirt') && (this.state.filterID !== 'trousers')) && 
+                <p>Showing items for '{this.state.filterID}' category</p>}
+
+                {((this.state.filterID == 'skirt') || (this.state.filterID == 'trousers')) && 
+                <p>Currently no avalaible item for '{this.state.filterID}' category.</p>}
+
+                {this.state.filterID == 'all' && (<>{this.state.boards.map(board =>
+                  <div id='product-list-shopnow'>
+                  <Link style={{ textDecoration: 'none' }} to={`/productFromCategory/${board.key}`}>
+                      <div id='product-show-shopnow' style={{'margin':'0'}}><img id="thumbnail" src={board.image}/></div>
+                      <p><strong>{board.title}</strong><br/>
+                      <NumberFormat value={board.price} displayType={'text'} thousandSeparator={'.'} decimalSeparator={','} suffix={' IDR'} /></p>
+                  </Link>
+                  </div>
+                )}</>)}
+                {this.state.filterID !== 'all' &&
+                (<>{this.state.boards.map(board => board.category === this.state.filterID ?
                     (<div id='product-list-shopnow'>
                         <Link style={{ textDecoration: 'none' }} to={`/productFromCategory/${board.key}`}>
-                            <div id='product-show-shopnow'><img id="thumbnail" src={board.image}/></div>
+                            <div id='product-show-shopnow' style={{'margin':'0'}}><img id="thumbnail" src={board.image}/></div>
                             <p><strong>{board.title}</strong><br/>
                             <NumberFormat value={board.price} displayType={'text'} thousandSeparator={'.'} decimalSeparator={','} suffix={' IDR'} /></p>
                         </Link>
                     </div>) : (<></>)
-                    )}
+                    )}</>)}
             </Col>
         </Row>
         </Container>
