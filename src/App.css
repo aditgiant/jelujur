@@ -1168,8 +1168,8 @@ img {
 #back-to-catalog a{
   text-decoration:none;
   font-family:'Manrope';
-  font-size:1em;
-  color:#231f20;
+  font-size:0.8em;
+  color:#858585;
 }
 
 #back-to-catalog a>h3{
