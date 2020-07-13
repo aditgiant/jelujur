@@ -43,9 +43,9 @@ class OrderForm extends Component {
          }
          emailjs.send(
           'gmail',
-          'template_tsHONrJb',
+          'template_3v1QmP7B',
            templateParams,
-          'user_1zsD14BrG6sKcPqJ1zreg'
+          'user_HPm7oDjEdzA3Bs3tnHiDV'
          )
         } else {
           const state = this.state;
