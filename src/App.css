@@ -784,8 +784,6 @@ img {
   background: transparent;
   border-color:transparent;
   border-radius: 50%;
-  max-width: 40px;
-  max-height: 40px;
   transition: transform 1.2s
               cubic-bezier(0, .52, 0, 1);
   z-index:250;
@@ -796,6 +794,8 @@ img {
   #roundButton {
     top:30px;
     left:10px;
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -803,6 +803,8 @@ img {
   #roundButton {
     top:30px;
     left:30px;
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -845,7 +847,8 @@ img {
 
 #roundButton img{
   color: #C59A39;
-  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 #header {
