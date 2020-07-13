@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Menu from './imgsrc/hamburger_white.png'
-import CloseMenu from './imgsrc/close.png'
+import Menu from './imgsrc/hamburger_thick2.png'
+import CloseMenu from './imgsrc/close_thick2.png'
  
 class SidebarButtonHome extends Component {
   render() {
@@ -11,7 +11,7 @@ class SidebarButtonHome extends Component {
     return (
       <button id="roundButton"
               onMouseDown={this.props.handleMouseDown}
-              className={visibilitybutton}>
+              className={`roundButtonHome ${visibilitybutton}`}>
               {visibilitybutton==="hide" && <img className="roundButton-icon" src={Menu}/>}
               {visibilitybutton==="show" && <img className="roundButton-icon" src={CloseMenu}/>}
               </button>

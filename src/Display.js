@@ -92,7 +92,7 @@ class Display extends Component {
             <Home/>
             <div id="header-display">
                 
-                <Sidebar/>
+                {/* <Sidebar/> */}
                 <Header/>
                 <SearchFieldHeader/>
                 

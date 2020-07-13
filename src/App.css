@@ -114,13 +114,13 @@ body{
 
 #header-display {
   position:fixed;
-  background: #fff;
+  /* background: #fff; */
   height: 80px;
   z-index:500;
   top:0;
   left:0;
   width:100vw;
-  border-bottom: 1px solid #0000008f;
+  /* border-bottom: 1px solid #0000008f; */
 }
 
 .search-field {
@@ -399,13 +399,13 @@ body{
 
 .page-title > div > a > h1, h5 {
   text-align: center;
-  color: #c0aba0;
+  color: #dec4b6;
   cursor: pointer;
 }
 
 .page-title > div > a > h1 {
   letter-spacing: 10px;
-  font-size:2.5em;
+  font-size:4em;
   font-weight: 800;
 }
 
@@ -782,10 +782,10 @@ img {
 #roundButton {
   position:fixed;
   background: transparent;
-  width: 75px;
-  height: 75px;
   border-color:transparent;
   border-radius: 50%;
+  width: 35px;
+  height: 25px;
   transition: transform 1.2s
               cubic-bezier(0, .52, 0, 1);
   z-index:250;
@@ -794,15 +794,15 @@ img {
 
 @media (max-width: 480px){
   #roundButton {
-    top:5px;
-    left:5px;
+    top:30px;
+    left:15px;
   }
 }
 
 @media (min-width: 480px){
   #roundButton {
-    top:5px;
-    left:20px;
+    top:30px;
+    left:30px;
   }
 }
 
@@ -812,11 +812,11 @@ img {
 }
  
 #roundButton.show {
-  transform: translate3d(22vw, 0, 0) scale(0.75, 0.75) rotate(90deg);
+  transform: translate3d(23vw, 0, 0) scale(0.75, 0.75) rotate(90deg);
 }
 
 #roundButton.show:hover {
-  transform: translate3d(22vw, 0, 0) scale(0.9, 0.9) rotate(90deg);
+  transform: translate3d(23vw, 0, 0) scale(0.9, 0.9) rotate(90deg);
 }
 }
 
@@ -824,13 +824,17 @@ img {
   #roundButton.hide {
     transform: translate3d(0vw, 0, 0);
   }
+
+  #roundButton.roundButtonHome.hide {
+    filter: brightness(0) invert(1);
+  }
    
   #roundButton.show {
-    transform: translate3d(50vw, 0, 0) scale(0.75, 0.75) rotate(90deg);
+    transform: translate3d(57vw, 0, 0) scale(0.75, 0.75) rotate(90deg);
   }
   
   #roundButton.show:hover {
-    transform: translate3d(50vw, 0, 0) scale(0.9, 0.9) rotate(90deg);
+    transform: translate3d(57vw, 0, 0) scale(0.9, 0.9) rotate(90deg);
   }
   }
  
