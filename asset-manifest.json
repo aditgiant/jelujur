@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/jelujur/static/css/main.44f5508e.chunk.css",
+    "main.css": "/jelujur/static/css/main.2c4e367b.chunk.css",
     "main.js": "/jelujur/static/js/main.2ce2e17c.chunk.js",
     "main.js.map": "/jelujur/static/js/main.2ce2e17c.chunk.js.map",
     "runtime-main.js": "/jelujur/static/js/runtime-main.b8047482.js",
@@ -9,10 +9,10 @@
     "static/js/2.8635a066.chunk.js": "/jelujur/static/js/2.8635a066.chunk.js",
     "static/js/2.8635a066.chunk.js.map": "/jelujur/static/js/2.8635a066.chunk.js.map",
     "index.html": "/jelujur/index.html",
-    "precache-manifest.69aff64ebb5a929b6612d07962bae7b5.js": "/jelujur/precache-manifest.69aff64ebb5a929b6612d07962bae7b5.js",
+    "precache-manifest.9f627ceb223c3565480d2d38b6f9371a.js": "/jelujur/precache-manifest.9f627ceb223c3565480d2d38b6f9371a.js",
     "service-worker.js": "/jelujur/service-worker.js",
     "static/css/2.69121389.chunk.css.map": "/jelujur/static/css/2.69121389.chunk.css.map",
-    "static/css/main.44f5508e.chunk.css.map": "/jelujur/static/css/main.44f5508e.chunk.css.map",
+    "static/css/main.2c4e367b.chunk.css.map": "/jelujur/static/css/main.2c4e367b.chunk.css.map",
     "static/js/2.8635a066.chunk.js.LICENSE.txt": "/jelujur/static/js/2.8635a066.chunk.js.LICENSE.txt",
     "static/media/App.css": "/jelujur/static/media/HomeWallpaper.9de544b4.jpg",
     "static/media/Jelujur_logoori.gif": "/jelujur/static/media/Jelujur_logoori.74d4035d.gif",
@@ -30,7 +30,7 @@
     "static/js/runtime-main.b8047482.js",
     "static/css/2.69121389.chunk.css",
     "static/js/2.8635a066.chunk.js",
-    "static/css/main.44f5508e.chunk.css",
+    "static/css/main.2c4e367b.chunk.css",
     "static/js/main.2ce2e17c.chunk.js"
   ]
 }

@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "da7e558435d98e3d6b0d6bd784b92c09",
+    "revision": "05cfb2392301616962ca5953fa543f58",
     "url": "/jelujur/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/jelujur/static/css/2.69121389.chunk.css"
   },
   {
-    "revision": "6b66630235574af20c39",
-    "url": "/jelujur/static/css/main.44f5508e.chunk.css"
+    "revision": "003cd240148081aa0865",
+    "url": "/jelujur/static/css/main.2c4e367b.chunk.css"
   },
   {
     "revision": "9352ce0a53cec77d535c",
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/jelujur/static/js/2.8635a066.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6b66630235574af20c39",
+    "revision": "003cd240148081aa0865",
     "url": "/jelujur/static/js/main.2ce2e17c.chunk.js"
   },
   {
