@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Menu from './imgsrc/hamburger.png'
+import Menu from './imgsrc/hamburger_thick2.png'
 import CloseMenu from './imgsrc/close_thick2.png'
  
 class SidebarButtonHome extends Component {
